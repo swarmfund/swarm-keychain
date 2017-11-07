@@ -1,7 +1,7 @@
 package utf8
 
 import (
-	"bullioncoin.githost.io/development/keychain/test"
+	"gitlab.com/distributed_lab/tokend/keychain/test"
 	"testing"
 )
 

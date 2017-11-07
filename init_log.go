@@ -1,7 +1,7 @@
 package keychain
 
 import (
-	"bullioncoin.githost.io/development/keychain/log"
+	"gitlab.com/distributed_lab/tokend/keychain/log"
 	"github.com/multiplay/go-slack/chat"
 	"github.com/multiplay/go-slack/lrhook"
 	"github.com/sirupsen/logrus"

@@ -3,8 +3,8 @@ package keychain
 import (
 	"net/http"
 
-	"bullioncoin.githost.io/development/keychain/context/requestid"
-	"bullioncoin.githost.io/development/keychain/httpx"
+	"gitlab.com/distributed_lab/tokend/keychain/context/requestid"
+	"gitlab.com/distributed_lab/tokend/keychain/httpx"
 	gctx "github.com/goji/context"
 	"github.com/zenazn/goji/web"
 	"golang.org/x/net/context"

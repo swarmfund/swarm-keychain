@@ -1,10 +1,10 @@
 package keychain
 
 import (
-	"bullioncoin.githost.io/development/keychain/db2"
-	"bullioncoin.githost.io/development/keychain/db2/core"
-	"bullioncoin.githost.io/development/keychain/db2/keychain"
-	"bullioncoin.githost.io/development/keychain/log"
+	"gitlab.com/distributed_lab/tokend/keychain/db2"
+	"gitlab.com/distributed_lab/tokend/keychain/db2/core"
+	"gitlab.com/distributed_lab/tokend/keychain/db2/keychain"
+	"gitlab.com/distributed_lab/tokend/keychain/log"
 )
 
 func initKeychainDb(app *App) {

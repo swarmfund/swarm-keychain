@@ -1,10 +1,10 @@
 package keychain
 
 import (
-	"bullioncoin.githost.io/development/keychain/db2/keychain"
-	"bullioncoin.githost.io/development/keychain/render/hal"
-	"bullioncoin.githost.io/development/keychain/render/problem"
-	"bullioncoin.githost.io/development/keychain/resource"
+	"gitlab.com/distributed_lab/tokend/keychain/db2/keychain"
+	"gitlab.com/distributed_lab/tokend/keychain/render/hal"
+	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
+	"gitlab.com/distributed_lab/tokend/keychain/resource"
 )
 
 type GetKeyAction struct {

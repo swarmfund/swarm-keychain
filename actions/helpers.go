@@ -12,10 +12,10 @@ import (
 
 	"bullioncoin.githost.io/development/go/strkey"
 	"bullioncoin.githost.io/development/go/xdr"
-	"bullioncoin.githost.io/development/keychain/db2"
-	"bullioncoin.githost.io/development/keychain/db2/core"
-	"bullioncoin.githost.io/development/keychain/render/problem"
-	"bullioncoin.githost.io/development/keychain/utils"
+	"gitlab.com/distributed_lab/tokend/keychain/db2"
+	"gitlab.com/distributed_lab/tokend/keychain/db2/core"
+	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
+	"gitlab.com/distributed_lab/tokend/keychain/utils"
 )
 
 const (

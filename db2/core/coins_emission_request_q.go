@@ -1,7 +1,7 @@
 package core
 
 import (
-	"bullioncoin.githost.io/development/keychain/db2"
+	"gitlab.com/distributed_lab/tokend/keychain/db2"
 	sq "github.com/lann/squirrel"
 )
 

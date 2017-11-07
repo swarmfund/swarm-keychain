@@ -4,7 +4,7 @@ package core
 
 import (
 	"bullioncoin.githost.io/development/go/xdr"
-	"bullioncoin.githost.io/development/keychain/db2"
+	"gitlab.com/distributed_lab/tokend/keychain/db2"
 	"github.com/jmoiron/sqlx"
 	sq "github.com/lann/squirrel"
 )

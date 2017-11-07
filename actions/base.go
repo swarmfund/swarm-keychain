@@ -12,9 +12,9 @@ import (
 	"encoding/json"
 	"errors"
 
-	"bullioncoin.githost.io/development/keychain/render"
-	"bullioncoin.githost.io/development/keychain/render/problem"
-	"bullioncoin.githost.io/development/keychain/render/sse"
+	"gitlab.com/distributed_lab/tokend/keychain/render"
+	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
+	"gitlab.com/distributed_lab/tokend/keychain/render/sse"
 	"github.com/zenazn/goji/web"
 	"golang.org/x/net/context"
 )

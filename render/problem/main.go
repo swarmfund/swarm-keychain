@@ -7,9 +7,9 @@ import (
 
 	"time"
 
-	"bullioncoin.githost.io/development/keychain/context/requestid"
-	"bullioncoin.githost.io/development/keychain/log"
-	"bullioncoin.githost.io/development/keychain/utils"
+	"gitlab.com/distributed_lab/tokend/keychain/context/requestid"
+	"gitlab.com/distributed_lab/tokend/keychain/log"
+	"gitlab.com/distributed_lab/tokend/keychain/utils"
 	"github.com/go-errors/errors"
 	"golang.org/x/net/context"
 )

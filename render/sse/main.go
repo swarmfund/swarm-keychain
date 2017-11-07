@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"sync"
 
-	"bullioncoin.githost.io/development/keychain/log"
+	"gitlab.com/distributed_lab/tokend/keychain/log"
 	"golang.org/x/net/context"
 )
 

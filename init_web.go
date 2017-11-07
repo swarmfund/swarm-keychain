@@ -3,7 +3,7 @@ package keychain
 import (
 	"database/sql"
 
-	"bullioncoin.githost.io/development/keychain/render/problem"
+	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
 	"github.com/rcrowley/go-metrics"
 	"github.com/sebest/xff"
 	"github.com/zenazn/goji/web"

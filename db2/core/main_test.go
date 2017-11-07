@@ -3,7 +3,7 @@ package core
 import (
 	"testing"
 
-	"bullioncoin.githost.io/development/keychain/test"
+	"gitlab.com/distributed_lab/tokend/keychain/test"
 )
 
 func TestLatestLedger(t *testing.T) {

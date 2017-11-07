@@ -4,8 +4,8 @@ import (
 	"log"
 	"runtime"
 
-	"bullioncoin.githost.io/development/keychain"
-	"bullioncoin.githost.io/development/keychain/config"
+	"gitlab.com/distributed_lab/tokend/keychain"
+	"gitlab.com/distributed_lab/tokend/keychain/config"
 	"github.com/spf13/cobra"
 )
 

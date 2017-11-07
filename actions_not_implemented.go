@@ -1,6 +1,6 @@
 package keychain
 
-import "bullioncoin.githost.io/development/keychain/render/problem"
+import "gitlab.com/distributed_lab/tokend/keychain/render/problem"
 
 // NotImplementedAction renders a NotImplemented prblem
 type NotImplementedAction struct {

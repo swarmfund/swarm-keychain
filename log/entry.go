@@ -1,7 +1,7 @@
 package log
 
 import (
-	"bullioncoin.githost.io/development/keychain/errors"
+	"gitlab.com/distributed_lab/tokend/keychain/errors"
 	"github.com/sirupsen/logrus"
 )
 

@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"errors"
 
-	"bullioncoin.githost.io/development/keychain/db2"
+	"gitlab.com/distributed_lab/tokend/keychain/db2"
 	migrate "github.com/rubenv/sql-migrate"
 )
 

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"bullioncoin.githost.io/development/keychain/db2"
+	"gitlab.com/distributed_lab/tokend/keychain/db2"
 	"database/sql"
 	"github.com/spf13/cobra"
 	"log"

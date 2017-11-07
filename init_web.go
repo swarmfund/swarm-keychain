@@ -3,11 +3,10 @@ package keychain
 import (
 	"database/sql"
 
-	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
 	"github.com/rcrowley/go-metrics"
-	"github.com/sebest/xff"
 	"github.com/zenazn/goji/web"
 	"github.com/zenazn/goji/web/middleware"
+	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
 )
 
 // Web contains the http server related fields for horizon: the router,
@@ -41,7 +40,6 @@ func initWebMiddleware(app *App) {
 	r.Use(app.Middleware)
 	r.Use(middleware.RequestID)
 	r.Use(contextMiddleware(app.ctx))
-	r.Use(xff.Handler)
 	r.Use(LoggerMiddleware)
 	r.Use(RecoverMiddleware)
 	r.Use(middleware.AutomaticOptions)

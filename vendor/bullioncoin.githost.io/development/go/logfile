@@ -1,0 +1,1143 @@
+LOG:  database system was interrupted; last known up at 2017-03-07 22:58:06 EET
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  invalid record length at 0/50F3AE8: wanted 24, got 0
+LOG:  redo is not required
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  unexpected EOF on client connection with an open transaction
+LOG:  unexpected EOF on client connection with an open transaction
+LOG:  unexpected EOF on client connection with an open transaction
+ERROR:  syntax error at or near ")" at character 363
+STATEMENT:  CREATE TABLE history_emission_requests (
+	    id bigint NOT NULL,
+	    request_id character varying(64) NOT NULL,
+	    issuer character varying(64) NOT NULL,
+	    amount bigint NOT NULL,
+	    is_approved int NOT NULL,
+	    details jsonb NOT NULL,
+	    preemissions jsonb NOT NULL,
+	    created_at timestamp without time zone,
+	    updated_at timestamp without time zone,
+	);
+ERROR:  syntax error at or near ")" at character 363
+STATEMENT:  CREATE TABLE history_emission_requests (
+	    id bigint NOT NULL,
+	    request_id character varying(64) NOT NULL,
+	    issuer character varying(64) NOT NULL,
+	    amount bigint NOT NULL,
+	    is_approved int NOT NULL,
+	    details jsonb NOT NULL,
+	    preemissions jsonb NOT NULL,
+	    created_at timestamp without time zone,
+	    updated_at timestamp without time zone,
+	);
+ERROR:  syntax error at or near ")" at character 363
+STATEMENT:  CREATE TABLE history_emission_requests (
+	    id bigint NOT NULL,
+	    request_id character varying(64) NOT NULL,
+	    issuer character varying(64) NOT NULL,
+	    amount bigint NOT NULL,
+	    is_approved int NOT NULL,
+	    details jsonb NOT NULL,
+	    preemissions jsonb NOT NULL,
+	    created_at timestamp without time zone,
+	    updated_at timestamp without time zone,
+	);
+ERROR:  syntax error at or near ")" at character 354
+STATEMENT:  CREATE TABLE history_emission_requests (
+	    id serial,
+	    request_id character varying(64) NOT NULL,
+	    issuer character varying(64) NOT NULL,
+	    amount bigint NOT NULL,
+	    is_approved int NOT NULL,
+	    details jsonb NOT NULL,
+	    preemissions jsonb NOT NULL,
+	    created_at timestamp without time zone,
+	    updated_at timestamp without time zone,
+	);
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  syntax error at or near ")" at character 372
+STATEMENT:  CREATE TABLE history_emission_requests (
+	    id serial,
+	    request_id character varying(64) NOT NULL,
+	    issuer character varying(64) NOT NULL,
+	    amount bigint NOT NULL,
+	    is_approved boolean NOT NULL default false,
+	    details jsonb NOT NULL,
+	    preemissions jsonb NOT NULL,
+	    created_at timestamp without time zone,
+	    updated_at timestamp without time zone,
+	);
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(81, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(86, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  syntax error at or near "use" at character 1
+STATEMENT:  use horizon;
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  invalid input syntax for integer: "false"
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,is_approved,details,preemissions,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  relation "history_accounts" already exists
+STATEMENT:  CREATE TABLE history_accounts (
+	    id bigint NOT NULL,
+	    address character varying(64)
+	);
+ERROR:  relation "history_effects" already exists
+STATEMENT:  CREATE TABLE history_effects (
+	    history_account_id bigint NOT NULL,
+	    history_operation_id bigint NOT NULL,
+	    "order" integer NOT NULL,
+	    type integer NOT NULL,
+	    details jsonb
+	);
+ERROR:  relation "history_ledgers" already exists
+STATEMENT:  CREATE TABLE history_ledgers (
+	    sequence integer NOT NULL,
+	    ledger_hash character varying(64) NOT NULL,
+	    previous_ledger_hash character varying(64),
+	    transaction_count integer DEFAULT 0 NOT NULL,
+	    operation_count integer DEFAULT 0 NOT NULL,
+	    closed_at timestamp without time zone NOT NULL,
+	    created_at timestamp without time zone,
+	    updated_at timestamp without time zone,
+	    id bigint,
+	    importer_version integer DEFAULT 1 NOT NULL,
+	    total_coins bigint NOT NULL,
+	    fee_pool bigint NOT NULL,
+	    base_fee integer NOT NULL,
+	    base_reserve integer NOT NULL,
+	    max_tx_set_size integer NOT NULL
+	);
+ERROR:  relation "history_operation_participants" already exists
+STATEMENT:  CREATE TABLE history_operation_participants (
+	    id integer NOT NULL,
+	    history_operation_id bigint NOT NULL,
+	    history_account_id bigint NOT NULL
+	);
+ERROR:  relation "history_operation_participants_id_seq" already exists
+STATEMENT:  CREATE SEQUENCE history_operation_participants_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+ERROR:  relation "history_operations" already exists
+STATEMENT:  CREATE TABLE history_operations (
+	    id bigint NOT NULL,
+	    transaction_id bigint NOT NULL,
+	    application_order integer NOT NULL,
+	    type integer NOT NULL,
+	    details jsonb,
+	    source_account character varying(64) DEFAULT ''::character varying NOT NULL
+	);
+ERROR:  relation "history_transaction_participants" already exists
+STATEMENT:  CREATE TABLE history_transaction_participants (
+	  id integer NOT NULL,
+	  history_transaction_id bigint NOT NULL,
+	  history_account_id bigint NOT NULL
+	);
+ERROR:  relation "history_transaction_participants_id_seq" already exists
+STATEMENT:  CREATE SEQUENCE history_transaction_participants_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+ERROR:  relation "history_transactions" already exists
+STATEMENT:  CREATE TABLE history_transactions (
+	    transaction_hash character varying(64) NOT NULL,
+	    ledger_sequence integer NOT NULL,
+	    application_order integer NOT NULL,
+	    account character varying(64) NOT NULL,
+	    account_sequence bigint NOT NULL,
+	    fee_paid integer NOT NULL,
+	    operation_count integer NOT NULL,
+	    created_at timestamp without time zone,
+	    updated_at timestamp without time zone,
+	    id bigint,
+	    tx_envelope text NOT NULL,
+	    tx_result text NOT NULL,
+	    tx_meta text NOT NULL,
+	    tx_fee_meta text NOT NULL,
+	    signatures character varying(96)[] DEFAULT '{}'::character varying[] NOT NULL,
+	    memo_type character varying DEFAULT 'none'::character varying NOT NULL,
+	    memo character varying,
+	    time_bounds int8range
+	);
+ERROR:  multiple primary keys for table "history_operation_participants" are not allowed
+STATEMENT:  ALTER TABLE ONLY history_operation_participants
+	    ADD CONSTRAINT history_operation_participants_pkey PRIMARY KEY (id);
+ERROR:  multiple primary keys for table "history_transaction_participants" are not allowed
+STATEMENT:  ALTER TABLE ONLY history_transaction_participants
+	    ADD CONSTRAINT history_transaction_participants_pkey PRIMARY KEY (id);
+ERROR:  relation "users" already exists
+STATEMENT:  CREATE TABLE users (
+	    id BIGINT NOT NULL,
+	    address character varying(64) NOT NULL,
+	    email character varying(64) NOT NULL,
+	    user_type character varying(64) NOT NULL,
+	    country_code character varying(64) NOT NULL,
+	    state character varying(64) NOT NULL,
+	    details jsonb NOT NULL,
+	    reject_reasons jsonb NOT NULL,
+	    documents jsonb NOT NULL,
+	    created_at timestamp NOT NULL,
+	    updated_at timestamp NOT NULL,
+	    deleted_at timestamp
+	);
+ERROR:  relation "users_id_seq" already exists
+STATEMENT:  CREATE SEQUENCE users_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+ERROR:  multiple primary keys for table "users" are not allowed
+STATEMENT:  ALTER TABLE ONLY users
+	    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+ERROR:  relation "by_account" already exists
+STATEMENT:  CREATE INDEX by_account ON history_transactions USING btree (account, account_sequence);
+ERROR:  relation "by_hash" already exists
+STATEMENT:  CREATE INDEX by_hash ON history_transactions USING btree (transaction_hash);
+ERROR:  relation "by_ledger" already exists
+STATEMENT:  CREATE INDEX by_ledger ON history_transactions USING btree (ledger_sequence, application_order);
+ERROR:  relation "hist_e_by_order" already exists
+STATEMENT:  CREATE UNIQUE INDEX hist_e_by_order ON history_effects USING btree (history_operation_id, "order");
+ERROR:  relation "hist_e_id" already exists
+STATEMENT:  CREATE UNIQUE INDEX hist_e_id ON history_effects USING btree (history_account_id, history_operation_id, "order");
+ERROR:  relation "hist_op_p_id" already exists
+STATEMENT:  CREATE UNIQUE INDEX hist_op_p_id ON history_operation_participants USING btree (history_account_id, history_operation_id);
+ERROR:  relation "hs_ledger_by_id" already exists
+STATEMENT:  CREATE UNIQUE INDEX hs_ledger_by_id ON history_ledgers USING btree (id);
+ERROR:  relation "hs_transaction_by_id" already exists
+STATEMENT:  CREATE UNIQUE INDEX hs_transaction_by_id ON history_transactions USING btree (id);
+ERROR:  relation "index_history_accounts_on_address" already exists
+STATEMENT:  CREATE UNIQUE INDEX index_history_accounts_on_address ON history_accounts USING btree (address);
+ERROR:  relation "index_history_accounts_on_id" already exists
+STATEMENT:  CREATE UNIQUE INDEX index_history_accounts_on_id ON history_accounts USING btree (id);
+ERROR:  relation "index_history_effects_on_type" already exists
+STATEMENT:  CREATE INDEX index_history_effects_on_type ON history_effects USING btree (type);
+ERROR:  relation "index_history_ledgers_on_closed_at" already exists
+STATEMENT:  CREATE INDEX index_history_ledgers_on_closed_at ON history_ledgers USING btree (closed_at);
+ERROR:  relation "index_history_ledgers_on_id" already exists
+STATEMENT:  CREATE UNIQUE INDEX index_history_ledgers_on_id ON history_ledgers USING btree (id);
+ERROR:  relation "index_history_ledgers_on_importer_version" already exists
+STATEMENT:  CREATE INDEX index_history_ledgers_on_importer_version ON history_ledgers USING btree (importer_version);
+ERROR:  relation "index_history_ledgers_on_ledger_hash" already exists
+STATEMENT:  CREATE UNIQUE INDEX index_history_ledgers_on_ledger_hash ON history_ledgers USING btree (ledger_hash);
+ERROR:  relation "index_history_ledgers_on_previous_ledger_hash" already exists
+STATEMENT:  CREATE UNIQUE INDEX index_history_ledgers_on_previous_ledger_hash ON history_ledgers USING btree (previous_ledger_hash);
+ERROR:  relation "index_history_ledgers_on_sequence" already exists
+STATEMENT:  CREATE UNIQUE INDEX index_history_ledgers_on_sequence ON history_ledgers USING btree (sequence);
+ERROR:  relation "index_history_operations_on_id" already exists
+STATEMENT:  CREATE UNIQUE INDEX index_history_operations_on_id ON history_operations USING btree (id);
+ERROR:  relation "index_history_operations_on_transaction_id" already exists
+STATEMENT:  CREATE INDEX index_history_operations_on_transaction_id ON history_operations USING btree (transaction_id);
+ERROR:  relation "index_history_operations_on_type" already exists
+STATEMENT:  CREATE INDEX index_history_operations_on_type ON history_operations USING btree (type);
+ERROR:  relation "hist_tx_p_id" already exists
+STATEMENT:  CREATE UNIQUE INDEX hist_tx_p_id ON history_transaction_participants USING btree (history_account_id, history_transaction_id);
+ERROR:  relation "index_history_transactions_on_id" already exists
+STATEMENT:  CREATE UNIQUE INDEX index_history_transactions_on_id ON history_transactions USING btree (id);
+ERROR:  relation "trade_effects_by_order_book" already exists
+STATEMENT:  CREATE INDEX trade_effects_by_order_book ON history_effects USING btree (((details ->> 'sold_asset_type'::text)), ((details ->> 'sold_asset_code'::text)), ((details ->> 'sold_asset_issuer'::text)), ((details ->> 'bought_asset_type'::text)), ((details ->> 'bought_asset_code'::text)), ((details ->> 'bought_asset_issuer'::text))) WHERE (type = 33);
+ERROR:  relation "hop_by_hoid" already exists
+STATEMENT:  CREATE INDEX hop_by_hoid ON history_operation_participants USING btree (history_operation_id);
+ERROR:  relation "htp_by_htid" already exists
+STATEMENT:  CREATE INDEX htp_by_htid ON history_transaction_participants USING btree (history_transaction_id);
+ERROR:  relation "history_accounts_id_seq" already exists
+STATEMENT:  CREATE SEQUENCE history_accounts_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+ERROR:  relation "history_emission_requests" already exists
+STATEMENT:  CREATE TABLE history_emission_requests (
+	    id serial,
+	    request_id character varying(64) NOT NULL,
+	    issuer character varying(64) NOT NULL,
+	    amount bigint NOT NULL,
+	    is_approved boolean NOT NULL default false,
+	    details jsonb NOT NULL,
+	    preemissions jsonb NOT NULL,
+	    created_at timestamp without time zone,
+	    updated_at timestamp without time zone
+	);
+ERROR:  relation "hop_by_hoid" already exists
+STATEMENT:  CREATE INDEX hop_by_hoid ON history_operation_participants USING btree (history_operation_id);
+ERROR:  relation "htp_by_htid" already exists
+STATEMENT:  CREATE INDEX htp_by_htid ON history_transaction_participants USING btree (history_transaction_id);
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  relation "history_emission_requests_id_seq" already exists
+STATEMENT:  CREATE SEQUENCE history_emission_requests_id_seq
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  syntax error at or near "describe" at character 1
+STATEMENT:  describe table history_emission_requests;
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, GDRYPVZ63SR7V2G46GKRGABJD3XPDNWQ4B4PQPJBTTDUEAKH5ZECPTSN).
+STATEMENT:  INSERT INTO history_accounts (address) VALUES ($1) RETURNING id
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 124554055681) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  relation "history_accounts" already exists
+STATEMENT:  
+	--
+	-- Name: history_accounts; Type: TABLE; Schema: public; Owner: -; Tablespace:
+	--
+	
+	CREATE TABLE history_accounts (
+	    id bigint NOT NULL,
+	    address character varying(64)
+	);
+	
+ERROR:  relation "history_accounts" already exists
+STATEMENT:  
+	--
+	-- Name: history_accounts; Type: TABLE; Schema: public; Owner: -; Tablespace:
+	--
+	
+	CREATE TABLE history_accounts (
+	    id bigint NOT NULL,
+	    address character varying(64)
+	);
+	
+FATAL:  database "horizon" does not exist
+FATAL:  database "user" does not exist
+ERROR:  relation "history_emission_requests" does not exist at character 15
+STATEMENT:  select * from history_emission_requests;
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+ERROR:  duplicate key value violates unique constraint "hist_op_p_id"
+DETAIL:  Key (history_account_id, history_operation_id)=(5, 579820589057) already exists.
+STATEMENT:  INSERT INTO history_operation_participants (history_operation_id,history_account_id) VALUES ($1,$2)
+FATAL:  database "user" does not exist
+ERROR:  relation "history_ledgers" does not exist at character 40
+STATEMENT:  SELECT COALESCE(MAX(sequence), 0) FROM history_ledgers
+ERROR:  relation "history_ledgers" does not exist at character 40
+STATEMENT:  SELECT COALESCE(MAX(sequence), 0) FROM history_ledgers
+ERROR:  relation "history_ledgers" does not exist at character 40
+STATEMENT:  SELECT COALESCE(MAX(sequence), 0) FROM history_ledgers
+ERROR:  relation "history_ledgers" does not exist at character 40
+STATEMENT:  SELECT COALESCE(MAX(sequence), 0) FROM history_ledgers
+ERROR:  relation "history_ledgers" does not exist at character 40
+STATEMENT:  SELECT COALESCE(MAX(sequence), 0) FROM history_ledgers
+ERROR:  relation "history_ledgers" does not exist at character 40
+STATEMENT:  SELECT COALESCE(MAX(sequence), 0) FROM history_ledgers
+ERROR:  relation "history_ledgers" does not exist at character 40
+STATEMENT:  SELECT COALESCE(MAX(sequence), 0) FROM history_ledgers
+ERROR:  missing FROM-clause entry for table "hc" at character 44
+STATEMENT:  SELECT ha.* FROM history_accounts ha WHERE hc.id > $1 ORDER BY hc.id asc LIMIT 10
+ERROR:  missing FROM-clause entry for table "hc" at character 44
+STATEMENT:  SELECT ha.* FROM history_accounts ha WHERE hc.id > $1 ORDER BY hc.id asc LIMIT 10
+ERROR:  missing FROM-clause entry for table "hc" at character 53
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hc.id > $1 ORDER BY hc.id asc LIMIT 10
+ERROR:  missing FROM-clause entry for table "hc" at character 53
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hc.id > $1 ORDER BY hc.id asc LIMIT 10
+ERROR:  missing FROM-clause entry for table "hc" at character 53
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hc.rd > $1 ORDER BY hc.rd asc LIMIT 10
+ERROR:  missing FROM-clause entry for table "hc" at character 53
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hc.rd > $1 ORDER BY hc.rd asc LIMIT 10
+ERROR:  relation "coins_emission_requests" does not exist at character 15
+STATEMENT:  select * from coins_emission_requests;
+ERROR:  value "9223372036854775807" is out of range for type integer
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hr.id < $1 ORDER BY hr.id desc LIMIT 10
+ERROR:  value "9223372036854775807" is out of range for type integer
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hr.id < $1 ORDER BY hr.id desc LIMIT 10
+ERROR:  column "pre_emissions" does not exist at character 8
+HINT:  Perhaps you meant to reference the column "history_emission_requests.preemissions".
+STATEMENT:  select pre_emissions from history_emission_requests;
+LOG:  unexpected EOF on client connection with an open transaction
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "approved" of relation "history_emission_requests" does not exist at character 38
+STATEMENT:  UPDATE history_emission_requests SET approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "pre_emissions" of relation "history_emission_requests" does not exist at character 56
+STATEMENT:  UPDATE history_emission_requests SET is_approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "pre_emissions" of relation "history_emission_requests" does not exist at character 56
+STATEMENT:  UPDATE history_emission_requests SET is_approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "pre_emissions" of relation "history_emission_requests" does not exist at character 56
+STATEMENT:  UPDATE history_emission_requests SET is_approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "pre_emissions" of relation "history_emission_requests" does not exist at character 56
+STATEMENT:  UPDATE history_emission_requests SET is_approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "pre_emissions" of relation "history_emission_requests" does not exist at character 56
+STATEMENT:  UPDATE history_emission_requests SET is_approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "pre_emissions" of relation "history_emission_requests" does not exist at character 56
+STATEMENT:  UPDATE history_emission_requests SET is_approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  column "pre_emissions" of relation "history_emission_requests" does not exist at character 56
+STATEMENT:  UPDATE history_emission_requests SET is_approved = $1, pre_emissions = $2 WHERE request_id = $3
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  INSERT has more target columns than expressions at character 113
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+ERROR:  value "9223372036854775807" is out of range for type integer
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hr.id < $1 ORDER BY hr.id desc LIMIT 10
+ERROR:  relation "coins_emission_request" does not exist at character 15
+STATEMENT:  select * from coins_emission_request;
+ERROR:  value "9223372036854775807" is out of range for type integer
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hr.id < $1 ORDER BY hr.id desc LIMIT 10
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (3, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:18.933733, 2017-03-09 11:23:18.933733).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (4, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:19.924339, 2017-03-09 11:23:19.924339).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (5, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:20.93679, 2017-03-09 11:23:20.936791).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (6, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:21.922982, 2017-03-09 11:23:21.922982).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (7, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:22.924741, 2017-03-09 11:23:22.924742).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (8, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:23.924831, 2017-03-09 11:23:23.924831).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (9, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:24.925045, 2017-03-09 11:23:24.925046).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (10, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:25.929583, 2017-03-09 11:23:25.929583).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (11, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:26.917139, 2017-03-09 11:23:26.917139).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (12, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:27.927005, 2017-03-09 11:23:27.927005).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (13, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:28.934507, 2017-03-09 11:23:28.934507).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (14, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:29.926241, 2017-03-09 11:23:29.926241).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (15, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:30.929272, 2017-03-09 11:23:30.929272).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (16, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:31.925396, 2017-03-09 11:23:31.925396).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (17, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:32.922634, 2017-03-09 11:23:32.922634).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (18, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:33.927342, 2017-03-09 11:23:33.927342).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (19, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:34.925871, 2017-03-09 11:23:34.925871).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (20, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:35.926414, 2017-03-09 11:23:35.926414).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (21, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:36.923283, 2017-03-09 11:23:36.923283).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (22, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:37.925016, 2017-03-09 11:23:37.925016).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (23, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:38.939264, 2017-03-09 11:23:38.939264).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (24, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:39.93029, 2017-03-09 11:23:39.93029).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (25, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:40.92573, 2017-03-09 11:23:40.92573).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (26, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:41.931565, 2017-03-09 11:23:41.931566).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (27, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:42.927187, 2017-03-09 11:23:42.927187).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (28, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:43.918865, 2017-03-09 11:23:43.918865).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (29, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:44.919344, 2017-03-09 11:23:44.919344).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (30, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:45.925631, 2017-03-09 11:23:45.925631).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (31, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:46.928957, 2017-03-09 11:23:46.928957).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (32, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:47.935198, 2017-03-09 11:23:47.935198).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (33, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:48.924271, 2017-03-09 11:23:48.924272).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (34, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:49.924888, 2017-03-09 11:23:49.924888).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (35, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:50.934075, 2017-03-09 11:23:50.934076).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (36, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:51.933614, 2017-03-09 11:23:51.933615).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (37, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:52.93141, 2017-03-09 11:23:52.93141).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (38, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:53.919439, 2017-03-09 11:23:53.919439).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (39, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:54.925264, 2017-03-09 11:23:54.925264).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (40, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:55.948673, 2017-03-09 11:23:55.948674).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (41, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:56.929711, 2017-03-09 11:23:56.929712).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "approved" violates not-null constraint
+DETAIL:  Failing row contains (42, b1f7f69e3bf290a8d9fd02a05d7390d1f75280fa05d472956ceeecd21063d08d, GBRQXJLVYYT2UM2PCSJDM4BJFZR5TEARIHAAEJMI2LIHSBY4KJ3XU52X, 31234560, null, {"key": "7a053d77bba847be", "amount": "3.123456", "source": "GBR..., {}, , 2017-03-09 11:23:57.926485, 2017-03-09 11:23:57.926485).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,approved,details,preemissions,reason,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+ERROR:  null value in column "preemissions" violates not-null constraint
+DETAIL:  Failing row contains (5, 7c89091622ad3b2713da4acf5365ec3cad556e25b220f30714e1ed245bd4833d, GC7LZ2L45NMJ7CBSAH6PBKJ5QV5UAIKRNN2DVARGVXXFTODRJNKDAAEO, 31234560, null, {"key": "16e8c691f7b8350b", "amount": "3.123456", "source": "GC7..., null, null, 2017-03-09 11:31:19.309981, 2017-03-09 11:31:19.309981).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,details,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6)
+ERROR:  null value in column "preemissions" violates not-null constraint
+DETAIL:  Failing row contains (6, 7c89091622ad3b2713da4acf5365ec3cad556e25b220f30714e1ed245bd4833d, GC7LZ2L45NMJ7CBSAH6PBKJ5QV5UAIKRNN2DVARGVXXFTODRJNKDAAEO, 31234560, null, {"key": "16e8c691f7b8350b", "amount": "3.123456", "source": "GC7..., null, null, 2017-03-09 11:31:20.301528, 2017-03-09 11:31:20.301528).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,details,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6)
+ERROR:  null value in column "preemissions" violates not-null constraint
+DETAIL:  Failing row contains (7, 7c89091622ad3b2713da4acf5365ec3cad556e25b220f30714e1ed245bd4833d, GC7LZ2L45NMJ7CBSAH6PBKJ5QV5UAIKRNN2DVARGVXXFTODRJNKDAAEO, 31234560, null, {"key": "16e8c691f7b8350b", "amount": "3.123456", "source": "GC7..., null, null, 2017-03-09 11:31:21.305734, 2017-03-09 11:31:21.305735).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,details,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6)
+ERROR:  null value in column "preemissions" violates not-null constraint
+DETAIL:  Failing row contains (8, 7c89091622ad3b2713da4acf5365ec3cad556e25b220f30714e1ed245bd4833d, GC7LZ2L45NMJ7CBSAH6PBKJ5QV5UAIKRNN2DVARGVXXFTODRJNKDAAEO, 31234560, null, {"key": "16e8c691f7b8350b", "amount": "3.123456", "source": "GC7..., null, null, 2017-03-09 11:31:22.299647, 2017-03-09 11:31:22.299647).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,details,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6)
+ERROR:  null value in column "preemissions" violates not-null constraint
+DETAIL:  Failing row contains (9, 7c89091622ad3b2713da4acf5365ec3cad556e25b220f30714e1ed245bd4833d, GC7LZ2L45NMJ7CBSAH6PBKJ5QV5UAIKRNN2DVARGVXXFTODRJNKDAAEO, 31234560, null, {"key": "16e8c691f7b8350b", "amount": "3.123456", "source": "GC7..., null, null, 2017-03-09 11:31:23.307058, 2017-03-09 11:31:23.307058).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,details,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6)
+ERROR:  null value in column "preemissions" violates not-null constraint
+DETAIL:  Failing row contains (10, 7c89091622ad3b2713da4acf5365ec3cad556e25b220f30714e1ed245bd4833d, GC7LZ2L45NMJ7CBSAH6PBKJ5QV5UAIKRNN2DVARGVXXFTODRJNKDAAEO, 31234560, null, {"key": "16e8c691f7b8350b", "amount": "3.123456", "source": "GC7..., null, null, 2017-03-09 11:31:24.320763, 2017-03-09 11:31:24.320763).
+STATEMENT:  INSERT INTO history_emission_requests (request_id,issuer,amount,details,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,$6)
+ERROR:  value "9223372036854775807" is out of range for type integer
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hr.id < $1 ORDER BY hr.id desc LIMIT 10
+ERROR:  value "9223372036854775807" is out of range for type integer
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hr.id < $1 ORDER BY hr.id desc LIMIT 10
+ERROR:  value "9223372036854775807" is out of range for type integer
+STATEMENT:  SELECT hr.* FROM history_emission_requests hr WHERE hr.id < $1 ORDER BY hr.id desc LIMIT 10
+LOG:  unexpected EOF on client connection with an open transaction
+FATAL:  database "user" does not exist
+ERROR:  relation "coins_emission_request" does not exist at character 15
+STATEMENT:  select * from coins_emission_request;
+ERROR:  syntax error at or near "preemissions" at character 8
+STATEMENT:  delete preemissions from history_emission_requests;
+ERROR:  syntax error at or near "select" at character 39
+STATEMENT:  delete from history_emission_requests
+	select 'delete from ' || tablename || ';' from pg_tables where schemaname='public';
+LOG:  unexpected EOF on client connection with an open transaction
+FATAL:  database "stellar-core_test" does not exist
+ERROR:  syntax error at or near "-" at character 24
+STATEMENT:  create database stellar-core_test;
+ERROR:  syntax error at or near "'stellar-core_test'" at character 17
+STATEMENT:  create database 'stellar-core_test';
+ERROR:  syntax error at or near "-" at character 24
+STATEMENT:  create database stellar-core_test;
+ERROR:  syntax error at or near "-" at character 22
+STATEMENT:  drop database stellar-core_test
+	create database "stellar-core_test";
+FATAL:  database "horizon_test" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+FATAL:  terminating connection due to administrator command
+FATAL:  terminating connection due to administrator command
+LOG:  shutting down
+LOG:  database system is shut down

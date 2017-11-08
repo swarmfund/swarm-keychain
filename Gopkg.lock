@@ -9,12 +9,6 @@
 
 [[projects]]
   branch = "master"
-  name = "bullioncoin.githost.io/development/go"
-  packages = ["amount","build","crc16","hash","keypair","network","signcontrol","strkey","support/errors","xdr"]
-  revision = "33924765498afe7c69ea0fbf82d571911ae349ad"
-
-[[projects]]
-  branch = "master"
   name = "github.com/agl/ed25519"
   packages = [".","edwards25519"]
   revision = "5312a61534124124185d41f09206b9fef1d88403"
@@ -24,12 +18,6 @@
   packages = ["."]
   revision = "73945b6115bfbbcc57d89b7316e28109364124e1"
   version = "v7"
-
-[[projects]]
-  name = "github.com/certifi/gocertifi"
-  packages = ["."]
-  revision = "a4ab0227d360091084658029ec8ae45f989fba3e"
-  version = "2017.11.05"
 
 [[projects]]
   name = "github.com/davecgh/go-spew"
@@ -42,12 +30,6 @@
   packages = ["."]
   revision = "629574ca2a5df945712d3079857300b5e4da0236"
   version = "v1.4.2"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/getsentry/raven-go"
-  packages = ["."]
-  revision = "1452f6376ddb15c546b6d7567e1d9518765391b5"
 
 [[projects]]
   branch = "master"
@@ -173,13 +155,7 @@
   branch = "master"
   name = "github.com/rubenv/sql-migrate"
   packages = [".","sqlparse"]
-  revision = "79fe99e24311fa42469fb2ca23eb3f8f065e6155"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/sebest/xff"
-  packages = ["."]
-  revision = "6c115e0ffa35d6a2e3f7a9e797c9cf07f0da4b9f"
+  revision = "27ebce5b74e63a71c82d93a37f5ce0a8e1e42714"
 
 [[projects]]
   name = "github.com/sirupsen/logrus"
@@ -256,26 +232,32 @@
 [[projects]]
   name = "gitlab.com/distributed_lab/logan"
   packages = ["."]
-  revision = "8c83a803a9fe3fc0c9e428ae0b31c8f29210ac31"
-  version = "v0.092"
+  revision = "922f51806a13e6afc6603df5923730b60bb7dfea"
+  version = "v2.0"
+
+[[projects]]
+  name = "gitlab.com/tokend/go"
+  packages = ["amount","build","crc16","hash","keypair","network","signcontrol","strkey","xdr"]
+  revision = "de4f90f3d3b23eb4194116241708a4d483b496be"
+  version = "v1"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "687d4b818545e443c8ba223cbef20b1721afd4db"
+  revision = "6a293f2d4b14b8e6d3f0539e383f6d0d30fce3fd"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
   packages = ["context","http2","http2/hpack","idna","lex/httplex"]
-  revision = "01c190206fbdffa42f334f4b2bf2220f50e64920"
+  revision = "a337091b0525af65de94df2eb7e98bd9962dcbe2"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix","windows"]
-  revision = "a22539bf85104b043e77b8db65881d360fbee0b7"
+  revision = "75813c647272dd855bda156405bf844a5414f5bf"
 
 [[projects]]
   branch = "master"
@@ -310,6 +292,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "c1a94f86042007e6afa7bc523a234721bf54e4f1ed16cf0343bd4a829aa69b8d"
+  inputs-digest = "233d1d2ed071bc2682c45ccd11be77dc013ee85c380b146d7aaa00df1f0d0f30"
   solver-name = "gps-cdcl"
   solver-version = 1

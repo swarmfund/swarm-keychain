@@ -3,8 +3,8 @@ package keychain
 import (
 	"net/http"
 
-	"gitlab.com/distributed_lab/tokend/keychain/errors"
-	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
+	"gitlab.com/tokend/keychain/errors"
+	"gitlab.com/tokend/keychain/render/problem"
 	gctx "github.com/goji/context"
 	"github.com/zenazn/goji/web"
 )

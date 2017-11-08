@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"gitlab.com/distributed_lab/tokend/keychain/test"
+	"gitlab.com/tokend/keychain/test"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

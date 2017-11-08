@@ -7,9 +7,9 @@ import (
 
 	"time"
 
-	"gitlab.com/distributed_lab/tokend/keychain/context/requestid"
-	"gitlab.com/distributed_lab/tokend/keychain/log"
-	"gitlab.com/distributed_lab/tokend/keychain/utils"
+	"gitlab.com/tokend/keychain/context/requestid"
+	"gitlab.com/tokend/keychain/log"
+	"gitlab.com/tokend/keychain/utils"
 	"github.com/go-errors/errors"
 	"golang.org/x/net/context"
 )
@@ -144,9 +144,7 @@ var (
 		Status: http.StatusInternalServerError,
 		Detail: "An error occurred while processing this request.  This is usually due " +
 			"to a bug within the server software.  Trying this request again may " +
-			"succeed if the bug is transient, otherwise please report this issue " +
-			"to the issue tracker at: https://bullioncoin.githost.io/development/horizon/issues." +
-			" Please include this response in your issue.",
+			"succeed if the bug is transient",
 	}
 
 	// RateLimitExceeded is a well-known problem type.  Use it as a shortcut

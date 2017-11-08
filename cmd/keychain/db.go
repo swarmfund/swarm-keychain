@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"gitlab.com/distributed_lab/tokend/keychain/db2/keychain/schema"
+	"gitlab.com/tokend/keychain/db2/keychain/schema"
 	"github.com/spf13/cobra"
 )
 

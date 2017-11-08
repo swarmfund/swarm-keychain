@@ -1,10 +1,10 @@
 package keychain
 
 import (
-	"gitlab.com/distributed_lab/tokend/keychain/db2"
-	"gitlab.com/distributed_lab/tokend/keychain/db2/core"
-	"gitlab.com/distributed_lab/tokend/keychain/db2/keychain"
-	"gitlab.com/distributed_lab/tokend/keychain/log"
+	"gitlab.com/tokend/keychain/db2"
+	"gitlab.com/tokend/keychain/db2/core"
+	"gitlab.com/tokend/keychain/db2/keychain"
+	"gitlab.com/tokend/keychain/log"
 )
 
 func initKeychainDb(app *App) {

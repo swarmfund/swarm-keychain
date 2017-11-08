@@ -5,8 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"gitlab.com/distributed_lab/tokend/keychain/context/requestid"
-	"gitlab.com/distributed_lab/tokend/keychain/test"
+	"gitlab.com/tokend/keychain/context/requestid"
+	"gitlab.com/tokend/keychain/test"
 	ge "github.com/go-errors/errors"
 	. "github.com/smartystreets/goconvey/convey"
 	"golang.org/x/net/context"

@@ -1,7 +1,7 @@
 package log
 
 import (
-	"gitlab.com/distributed_lab/tokend/keychain/errors"
+	"gitlab.com/tokend/keychain/errors"
 	"github.com/sirupsen/logrus"
 )
 

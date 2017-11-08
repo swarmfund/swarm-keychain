@@ -7,9 +7,9 @@ import (
 	"net/url"
 	"testing"
 
-	"bullioncoin.githost.io/development/go/xdr"
-	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
-	"gitlab.com/distributed_lab/tokend/keychain/test"
+	"gitlab.com/tokend/go/xdr"
+	"gitlab.com/tokend/keychain/render/problem"
+	"gitlab.com/tokend/keychain/test"
 	"github.com/zenazn/goji/web"
 )
 

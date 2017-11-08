@@ -1,6 +1,6 @@
 package resource
 
-import "gitlab.com/distributed_lab/tokend/keychain/db2/keychain"
+import "gitlab.com/tokend/keychain/db2/keychain"
 
 type JWK struct {
 	KeyType   string `json:"kty"`

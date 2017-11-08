@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gitlab.com/distributed_lab/tokend/keychain/db2"
+	"gitlab.com/tokend/keychain/db2"
 	"database/sql"
 	"github.com/spf13/cobra"
 	"log"

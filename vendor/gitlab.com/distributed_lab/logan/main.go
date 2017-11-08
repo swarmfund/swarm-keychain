@@ -7,30 +7,37 @@ import (
 	"io"
 )
 
+// DEPRECATED
 type F logrus.Fields
 
+// DEPRECATED
 func New() *Entry {
-	lastLogLevel := AllLevels[len(AllLevels) - 1]
+	lastLogLevel := AllLevels[len(AllLevels)-1]
 	return NewWithLevel(lastLogLevel)
 }
 
+// DEPRECATED
 func NewWithLevel(level Level) (result *Entry) {
 	return NewWithLevelFormatter(level, nil)
 }
 
+// DEPRECATED
 func NewWithJSONFormatter() (result *Entry) {
-	lastLogLevel := AllLevels[len(AllLevels) - 1]
+	lastLogLevel := AllLevels[len(AllLevels)-1]
 	return NewWithLevelJSONFormatter(lastLogLevel)
 }
 
+// DEPRECATED
 func NewWithLevelJSONFormatter(level Level) (result *Entry) {
 	return NewWithLevelFormatter(level, &logrus.JSONFormatter{})
 }
 
+// DEPRECATED
 func NewWithLevelFormatter(level Level, formatter Formatter) (result *Entry) {
 	return NewWithLevelFormatterOut(level, formatter, nil)
 }
 
+// DEPRECATED
 func NewWithLevelFormatterOut(level Level, formatter Formatter, out io.Writer) (result *Entry) {
 	logger := logrus.New()
 	logger.Level = logrus.Level(level)

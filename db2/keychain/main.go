@@ -1,6 +1,6 @@
 package keychain
 
-import "gitlab.com/distributed_lab/tokend/keychain/db2"
+import "gitlab.com/tokend/keychain/db2"
 
 type Q struct {
 	*db2.Repo

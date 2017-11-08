@@ -1,6 +1,6 @@
 package keychain
 
-import "gitlab.com/distributed_lab/tokend/keychain/render/problem"
+import "gitlab.com/tokend/keychain/render/problem"
 
 // NotFoundAction renders a 404 response
 type NotFoundAction struct {

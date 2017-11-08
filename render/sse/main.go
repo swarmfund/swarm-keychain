@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"sync"
 
-	"gitlab.com/distributed_lab/tokend/keychain/log"
+	"gitlab.com/tokend/keychain/log"
 	"golang.org/x/net/context"
 )
 

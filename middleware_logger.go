@@ -6,7 +6,7 @@ import (
 
 	"golang.org/x/net/context"
 
-	"gitlab.com/distributed_lab/tokend/keychain/log"
+	"gitlab.com/tokend/keychain/log"
 	gctx "github.com/goji/context"
 	"github.com/zenazn/goji/web"
 	"github.com/zenazn/goji/web/middleware"

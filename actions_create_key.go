@@ -7,10 +7,10 @@ import (
 
 	"strings"
 
-	"gitlab.com/distributed_lab/tokend/keychain/db2/keychain"
-	"gitlab.com/distributed_lab/tokend/keychain/render/hal"
-	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
-	"gitlab.com/distributed_lab/tokend/keychain/resource"
+	"gitlab.com/tokend/keychain/db2/keychain"
+	"gitlab.com/tokend/keychain/render/hal"
+	"gitlab.com/tokend/keychain/render/problem"
+	"gitlab.com/tokend/keychain/resource"
 )
 
 type CreateKeyAction struct {

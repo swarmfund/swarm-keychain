@@ -3,8 +3,8 @@ package keychain
 import (
 	"net/http"
 
-	"gitlab.com/distributed_lab/tokend/keychain/context/requestid"
-	"gitlab.com/distributed_lab/tokend/keychain/httpx"
+	"gitlab.com/tokend/keychain/context/requestid"
+	"gitlab.com/tokend/keychain/httpx"
 	gctx "github.com/goji/context"
 	"github.com/zenazn/goji/web"
 	"golang.org/x/net/context"

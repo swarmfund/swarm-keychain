@@ -1,6 +1,6 @@
 package actions
 
-import "gitlab.com/distributed_lab/tokend/keychain/render/sse"
+import "gitlab.com/tokend/keychain/render/sse"
 
 // JSON implementors can respond to a request whose response type was negotiated
 // to be MimeHal or MimeJSON.

@@ -26,10 +26,6 @@
   name = "bitbucket.org/ww/goautoneg"
 
 [[constraint]]
-  branch = "master"
-  name = "bullioncoin.githost.io/development/go"
-
-[[constraint]]
   name = "github.com/asaskevich/govalidator"
   version = "7.0.0"
 
@@ -70,10 +66,6 @@
   name = "github.com/rubenv/sql-migrate"
 
 [[constraint]]
-  branch = "master"
-  name = "github.com/sebest/xff"
-
-[[constraint]]
   name = "github.com/sirupsen/logrus"
   version = "1.0.3"
 
@@ -99,7 +91,11 @@
 
 [[constraint]]
   name = "gitlab.com/distributed_lab/logan"
-  version = "0.92.0"
+  version = "2.0.0"
+
+[[constraint]]
+  name = "gitlab.com/tokend/go"
+  version = "1.0.0"
 
 [[constraint]]
   branch = "master"

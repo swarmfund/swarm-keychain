@@ -3,7 +3,7 @@ package core
 import (
 	"testing"
 
-	"gitlab.com/distributed_lab/tokend/keychain/test"
+	"gitlab.com/tokend/keychain/test"
 )
 
 func TestTransactionsQueries(t *testing.T) {

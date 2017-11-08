@@ -3,8 +3,8 @@
 package core
 
 import (
-	"bullioncoin.githost.io/development/go/xdr"
-	"gitlab.com/distributed_lab/tokend/keychain/db2"
+	"gitlab.com/tokend/go/xdr"
+	"gitlab.com/tokend/keychain/db2"
 	"github.com/jmoiron/sqlx"
 	sq "github.com/lann/squirrel"
 )

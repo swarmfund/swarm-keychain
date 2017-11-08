@@ -6,7 +6,7 @@ import (
 	"github.com/rcrowley/go-metrics"
 	"github.com/zenazn/goji/web"
 	"github.com/zenazn/goji/web/middleware"
-	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
+	"gitlab.com/tokend/keychain/render/problem"
 )
 
 // Web contains the http server related fields for horizon: the router,

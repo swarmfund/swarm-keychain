@@ -3,8 +3,8 @@ package keychain
 import (
 	"net/http"
 
-	"bullioncoin.githost.io/development/go/signcontrol"
-	"gitlab.com/distributed_lab/tokend/keychain/render/problem"
+	"gitlab.com/tokend/go/signcontrol"
+	"gitlab.com/tokend/keychain/render/problem"
 	"github.com/zenazn/goji/web"
 )
 

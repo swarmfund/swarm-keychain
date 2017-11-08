@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"time"
 
-	"gitlab.com/distributed_lab/tokend/keychain/log"
+	"gitlab.com/tokend/keychain/log"
 	"github.com/go-errors/errors"
 	"github.com/jmoiron/sqlx"
 	sq "github.com/lann/squirrel"

@@ -1,7 +1,7 @@
 package utf8
 
 import (
-	"gitlab.com/distributed_lab/tokend/keychain/test"
+	"gitlab.com/tokend/keychain/test"
 	"testing"
 )
 

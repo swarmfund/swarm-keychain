@@ -4,8 +4,8 @@ import (
 	"log"
 	"runtime"
 
-	"gitlab.com/distributed_lab/tokend/keychain"
-	"gitlab.com/distributed_lab/tokend/keychain/config"
+	"gitlab.com/tokend/keychain"
+	"gitlab.com/tokend/keychain/config"
 	"github.com/spf13/cobra"
 )
 

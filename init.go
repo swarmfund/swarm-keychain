@@ -1,7 +1,7 @@
 package keychain
 
 import (
-	"gitlab.com/distributed_lab/tokend/keychain/log"
+	"gitlab.com/tokend/keychain/log"
 )
 
 // InitFn is a function that contributes to the initialization of an App struct

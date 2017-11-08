@@ -1,2 +1,0 @@
-18682:M 28 Feb 16:27:01.781 * Increased maximum number of open files to 10032 (it was originally set to 256).
-18682:M 28 Feb 16:27:01.782 # Creating Server TCP listening socket 127.0.0.1:6379: bind: Address already in use

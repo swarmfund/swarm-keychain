@@ -230,6 +230,11 @@
   version = "v1.0"
 
 [[projects]]
+  branch = "master"
+  name = "gitlab.com/distributed_lab/corer"
+  packages = ["."]
+  revision = "c379e0e1fad2b83654437a6764ac1ce7bd1c0660"
+
 [[projects]]
   branch = "master"
   name = "gitlab.com/distributed_lab/figure"
@@ -244,9 +249,9 @@
 
 [[projects]]
   name = "gitlab.com/tokend/go"
-  packages = ["amount","build","crc16","hash","keypair","network","signcontrol","strkey","xdr"]
-  revision = "de4f90f3d3b23eb4194116241708a4d483b496be"
-  version = "v1"
+  packages = ["amount","build","core","crc16","hash","keypair","network","signcontrol","strkey","xdr"]
+  revision = "a695ad6d719fc5dbab7711d646be887e20f5d7bd"
+  version = "v1.1"
 
 [[projects]]
   branch = "master"
@@ -293,6 +298,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "233d1d2ed071bc2682c45ccd11be77dc013ee85c380b146d7aaa00df1f0d0f30"
+  inputs-digest = "0f6750f1a809c3612b7b541bef5240e82e2b9c04920b71b1b771e1bf54179be2"
   solver-name = "gps-cdcl"
   solver-version = 1

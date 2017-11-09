@@ -12,10 +12,10 @@ import (
 	"gitlab.com/tokend/keychain/db2"
 	"gitlab.com/tokend/keychain/db2/core"
 	"gitlab.com/tokend/keychain/db2/keychain"
+	"gitlab.com/tokend/keychain/internal/api"
 	"gitlab.com/tokend/keychain/log"
 	"gitlab.com/tokend/keychain/render/sse"
 	"golang.org/x/net/context"
-	"golang.org/x/net/http2"
 )
 
 // You can override this variable using: gb build -ldflags "-X main.version aabbccdd"
@@ -64,29 +64,34 @@ func (a *App) Config() config.ConfigI {
 	return a._config
 }
 
-// Serve starts the horizon web server, binding it to a socket, setting up
-// the shutdown signals.
 func (a *App) Serve() {
-
-	a.web.router.Compile()
-	http.Handle("/", a.web.router)
+	//a.web.router.Compile()
+	//http.Handle("/", a.web.router)
 
 	addr := fmt.Sprintf("%s:%d", a.Config().HTTP().Host, a.Config().HTTP().Port)
 
 	srv := &http.Server{
 		Addr:    addr,
-		Handler: http.DefaultServeMux,
+		Handler: api.Router(log.WithField("service", "api")),
 	}
 
-	http2.ConfigureServer(srv, nil)
-
-	log.Infof("Starting horizon on %s", addr)
-
-	go a.run()
+	log.WithFields(log.F{
+		"addr":    addr,
+		"service": "api",
+	}).Info("listening")
 
 	if err := srv.ListenAndServe(); err != nil {
-		log.Panic(err)
+		panic(err)
 	}
+	//http2.ConfigureServer(srv, nil)
+	//
+	//log.Infof("Starting horizon on %s", addr)
+	//
+	//go a.run()
+	//
+	//if err := srv.ListenAndServe(); err != nil {
+	//	log.Panic(err)
+	//}
 }
 
 // Close cancels the app and forces the closure of db connections

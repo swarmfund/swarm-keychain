@@ -1,52 +1,48 @@
 package main
 
 import (
-	"log"
-	"runtime"
-
+	"github.com/spf13/cobra"
 	"gitlab.com/tokend/keychain"
 	"gitlab.com/tokend/keychain/config"
-	"github.com/spf13/cobra"
+	"gitlab.com/tokend/keychain/log"
 )
 
-var app *keychain.App
-var conf config.Config
-var version string
-
-var rootCmd *cobra.Command
-
-func main() {
-	if version != "" {
-		keychain.SetVersion(version)
-	}
-	runtime.GOMAXPROCS(runtime.NumCPU())
-	rootCmd.Execute()
-}
-
-func init() {
-
-	rootCmd = &cobra.Command{
+var (
+	configFile     string
+	configInstance config.ConfigI
+	rootCmd        = &cobra.Command{
 		Use: "keychain",
+	}
+	runCmd = &cobra.Command{
+		Use: "run",
 		Run: func(cmd *cobra.Command, args []string) {
-			initApp(cmd, args)
+			app, err := keychain.NewApp(configInstance)
+			if err != nil {
+				log.WithField("service", "init").WithError(err).Fatal("failed to init app")
+			}
 			app.Serve()
 		},
 	}
+)
 
-	conf.DefineConfigStructure(rootCmd)
-
-	rootCmd.AddCommand(dbCmd)
+func main() {
+	cobra.OnInitialize(func() {
+		c, err := initConfig(configFile)
+		if err != nil {
+			log.WithField("service", "init").WithError(err).Fatal("failed to init config")
+		}
+		configInstance = c
+	})
+	rootCmd.PersistentFlags().StringVar(&configFile, "config", "config.yaml", "config file")
+	rootCmd.AddCommand(runCmd)
+	rootCmd.AddCommand(keychainCmd)
+	rootCmd.Execute()
 }
 
-func initApp(cmd *cobra.Command, args []string) {
-	err := conf.Init()
-	if err != nil {
-		log.Println("Failed to init config")
-		log.Fatal(err.Error())
+func initConfig(fn string) (config.ConfigI, error) {
+	c := config.NewViperConfig(fn)
+	if err := c.Init(); err != nil {
+		return nil, err
 	}
-	app, err = keychain.NewApp(conf)
-
-	if err != nil {
-		log.Fatal(err.Error())
-	}
+	return c, nil
 }

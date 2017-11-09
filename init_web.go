@@ -44,7 +44,7 @@ func initWebMiddleware(app *App) {
 	r.Use(RecoverMiddleware)
 	r.Use(middleware.AutomaticOptions)
 
-	signatureValidator := &SignatureValidator{app.config.SkipCheck}
+	signatureValidator := &SignatureValidator{}
 
 	r.Use(signatureValidator.Middleware)
 }

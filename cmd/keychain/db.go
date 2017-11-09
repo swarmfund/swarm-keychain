@@ -1,10 +1,10 @@
 package main
 
 import (
-	"log"
-
-	"gitlab.com/tokend/keychain/db2/keychain/schema"
 	"github.com/spf13/cobra"
+	"gitlab.com/tokend/api/log"
+	"gitlab.com/tokend/keychain/config"
+	"gitlab.com/tokend/keychain/db2/keychain/schema"
 )
 
 var dbCmd = &cobra.Command{
@@ -18,7 +18,7 @@ var keychainCmd = &cobra.Command{
 }
 
 func init() {
-	dbCmd.AddCommand(keychainCmd)
+
 	keychainCmd.AddCommand(dbMigrateCmd)
 }
 
@@ -27,10 +27,10 @@ var dbMigrateCmd = &cobra.Command{
 	Short: "migrate schema",
 	Long:  "performs a schema migration command",
 	Run: func(cmd *cobra.Command, args []string) {
-		err := conf.Init()
-		if err != nil {
-			log.Fatal(err)
+		c := config.NewViperConfig(configFile)
+		if err := c.Init(); err != nil {
+			log.WithField("service", "init").WithError(err).Fatal("failed to init config")
 		}
-		migrateDB(cmd, args, conf.KeychainDatabaseURL, schema.Migrate)
+		migrateDB(cmd, args, c.Keychain().DatabaseURL, schema.Migrate)
 	},
 }

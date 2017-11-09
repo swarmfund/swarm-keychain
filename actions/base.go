@@ -37,8 +37,6 @@ type Base struct {
 
 	isJson   bool
 	jsonBody map[string]string
-
-	SkipCheck bool //flag for developing without signing, false - for checking signatures
 }
 
 // Prepare established the common attributes that get used in nearly every

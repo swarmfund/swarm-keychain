@@ -7,6 +7,8 @@ import (
 
 	"errors"
 
+	"github.com/zenazn/goji/web"
+	"gitlab.com/distributed_lab/logan"
 	"gitlab.com/tokend/go/signcontrol"
 	"gitlab.com/tokend/go/xdr"
 	"gitlab.com/tokend/keychain/actions"
@@ -16,8 +18,6 @@ import (
 	"gitlab.com/tokend/keychain/httpx"
 	"gitlab.com/tokend/keychain/log"
 	"gitlab.com/tokend/keychain/render/problem"
-	"github.com/zenazn/goji/web"
-	"gitlab.com/distributed_lab/logan"
 )
 
 // Action is the "base type" for all actions in horizon.  It provides
@@ -68,11 +68,6 @@ func (action *Action) IsAllowed(ownersOfData ...string) {
 }
 
 func (action *Action) isAllowed(ownerOfData string) {
-	//return if develop mode without signatures is used
-	if action.App.config.SkipCheck {
-		return
-	}
-
 	isSigner := action.IsAccountSigner(action.App.CoreInfo.MasterAccountID, action.Signer)
 	if action.Err != nil {
 		return
@@ -144,8 +139,6 @@ func (action *Action) Prepare(c web.C, w http.ResponseWriter, r *http.Request) {
 	base := &action.Base
 	base.Prepare(c, w, r)
 	action.App = action.GojiCtx.Env["app"].(*App)
-
-	base.SkipCheck = action.App.config.SkipCheck //pass config variable to base (since base can't read one)
 
 	base.Signer = r.Header.Get(signcontrol.PublicKeyHeader)
 

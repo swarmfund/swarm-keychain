@@ -230,6 +230,13 @@
   version = "v1.0"
 
 [[projects]]
+[[projects]]
+  branch = "master"
+  name = "gitlab.com/distributed_lab/figure"
+  packages = ["."]
+  revision = "a02d226a1f2467982746bdeb284c58a53f4557aa"
+
+[[projects]]
   name = "gitlab.com/distributed_lab/logan"
   packages = ["."]
   revision = "922f51806a13e6afc6603df5923730b60bb7dfea"
@@ -276,12 +283,6 @@
   packages = ["."]
   revision = "c87af80f3cc5036b55b83d77171e156791085e2e"
   version = "v1.7.1"
-
-[[projects]]
-  name = "gopkg.in/tylerb/graceful.v1"
-  packages = ["."]
-  revision = "4654dfbb6ad53cb5e27f37d99b02e16c1872fbbb"
-  version = "v1.2.15"
 
 [[projects]]
   branch = "v2"

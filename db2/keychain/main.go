@@ -11,7 +11,5 @@ func (q *Q) GetRepo() *db2.Repo {
 }
 
 func (q *Q) Key() *KeyQ {
-	return &KeyQ{
-		parent: q,
-	}
+	return &KeyQ{}
 }

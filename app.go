@@ -8,6 +8,7 @@ import (
 
 	"github.com/pkg/errors"
 	coreHelper "gitlab.com/tokend/go/core"
+	"gitlab.com/tokend/go/doorman"
 	"gitlab.com/tokend/keychain/config"
 	"gitlab.com/tokend/keychain/db2"
 	"gitlab.com/tokend/keychain/db2/core"
@@ -64,15 +65,25 @@ func (a *App) Config() config.ConfigI {
 	return a._config
 }
 
-func (a *App) Serve() {
-	//a.web.router.Compile()
-	//http.Handle("/", a.web.router)
+func (a *App) CoreAccountQ() *core.AccountQ {
+	return core.NewAccountQ(a.CoreRepo(a.ctx))
+}
 
+func (a *App) Serve() {
 	addr := fmt.Sprintf("%s:%d", a.Config().HTTP().Host, a.Config().HTTP().Port)
+
+	router := api.Router(
+		log.WithField("service", "api"),
+		&doorman.Doorman{
+			PassAllChecks: true,
+			AccountQ: a.CoreAccountQ(),
+		},
+		a.KeychainQ(),
+	)
 
 	srv := &http.Server{
 		Addr:    addr,
-		Handler: api.Router(log.WithField("service", "api")),
+		Handler: router,
 	}
 
 	log.WithFields(log.F{
@@ -83,15 +94,6 @@ func (a *App) Serve() {
 	if err := srv.ListenAndServe(); err != nil {
 		panic(err)
 	}
-	//http2.ConfigureServer(srv, nil)
-	//
-	//log.Infof("Starting horizon on %s", addr)
-	//
-	//go a.run()
-	//
-	//if err := srv.ListenAndServe(); err != nil {
-	//	log.Panic(err)
-	//}
 }
 
 // Close cancels the app and forces the closure of db connections
@@ -110,8 +112,10 @@ func (a *App) CoreQ() core.QInterface {
 	return a.coreQ
 }
 
-func (a *App) KeychainQ() *keychain.Q {
-	return a.keychainQ
+func (a *App) KeychainQ() *keychain.KeyQ {
+	return &keychain.KeyQ{
+		Repo: a.KeychainRepo(a.ctx),
+	}
 }
 
 // CoreRepo returns a new repo that loads data from the stellar core

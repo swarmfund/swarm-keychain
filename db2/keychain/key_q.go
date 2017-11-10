@@ -6,6 +6,7 @@ import (
 	"database/sql"
 
 	"github.com/lann/squirrel"
+	"gitlab.com/tokend/keychain/db2"
 )
 
 type Key struct {
@@ -16,7 +17,7 @@ type Key struct {
 }
 
 type KeyQ struct {
-	parent *Q
+	*db2.Repo
 }
 
 func (q *KeyQ) Create(key *Key) (bool, error) {
@@ -25,7 +26,7 @@ func (q *KeyQ) Create(key *Key) (bool, error) {
 		"filename":   key.Filename,
 		"key":        key.Key,
 	})
-	_, err := q.parent.Exec(stmt)
+	_, err := q.Exec(stmt)
 	if err != nil {
 		if strings.Contains(err.Error(), "unique_account_id_filename") {
 			return false, nil
@@ -40,7 +41,7 @@ func (q *KeyQ) Get(accountID, filename string) (*Key, error) {
 	stmt := squirrel.Select("*").From("keys").
 		Where("account_id = ? and filename = ?", accountID, filename)
 
-	err := q.parent.Get(&result, stmt)
+	err := q.Repo.Get(&result, stmt)
 	if err == sql.ErrNoRows {
 		return nil, nil
 	}

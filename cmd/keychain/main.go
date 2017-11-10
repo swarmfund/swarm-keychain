@@ -9,7 +9,7 @@ import (
 
 var (
 	configFile     string
-	configInstance config.ConfigI
+	configInstance config.Config
 	rootCmd        = &cobra.Command{
 		Use: "keychain",
 	}
@@ -39,7 +39,7 @@ func main() {
 	rootCmd.Execute()
 }
 
-func initConfig(fn string) (config.ConfigI, error) {
+func initConfig(fn string) (config.Config, error) {
 	c := config.NewViperConfig(fn)
 	if err := c.Init(); err != nil {
 		return nil, err

@@ -5,7 +5,7 @@ import (
 	"github.com/spf13/viper"
 )
 
-type ConfigI interface {
+type Config interface {
 	Init() error
 	Keychain() Keychain
 	HTTP() HTTP
@@ -17,7 +17,7 @@ type ViperConfig struct {
 	*viper.Viper
 }
 
-func NewViperConfig(fn string) ConfigI {
+func NewViperConfig(fn string) Config {
 	config := ViperConfig{
 		viper.GetViper(),
 	}

@@ -50,5 +50,6 @@ func GetKey(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// render response
+	// TODO render JWK resource
 	ape.Render(w, key)
 }

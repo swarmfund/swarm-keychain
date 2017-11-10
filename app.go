@@ -15,7 +15,6 @@ import (
 	"gitlab.com/tokend/keychain/db2/keychain"
 	"gitlab.com/tokend/keychain/internal/api"
 	"gitlab.com/tokend/keychain/log"
-	"gitlab.com/tokend/keychain/render/sse"
 	"golang.org/x/net/context"
 )
 
@@ -27,8 +26,7 @@ type App struct {
 	CoreInfo *coreHelper.Info
 
 	core      *coreHelper.Connector
-	_config   config.ConfigI
-	web       *Web
+	_config   config.Config
 	coreQ     core.QInterface
 	keychainQ *keychain.Q
 	ctx       context.Context
@@ -45,7 +43,7 @@ func SetVersion(v string) {
 }
 
 // NewApp constructs an new App instance from the provided config.
-func NewApp(config config.ConfigI) (*App, error) {
+func NewApp(config config.Config) (*App, error) {
 	app := &App{
 		_config: config,
 	}
@@ -61,7 +59,7 @@ func NewApp(config config.ConfigI) (*App, error) {
 	return app, nil
 }
 
-func (a *App) Config() config.ConfigI {
+func (a *App) Config() config.Config {
 	return a._config
 }
 
@@ -147,8 +145,6 @@ func (a *App) Tick() {
 	wg.Add(1)
 	go func() { a.UpdateStellarCoreInfo(); wg.Done() }()
 	wg.Wait()
-
-	sse.Tick()
 
 	log.Debug("finished ticking app")
 }

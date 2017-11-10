@@ -10,10 +10,10 @@ import (
 )
 
 type Key struct {
-	ID        int64  `db:"id"`
-	AccountID string `db:"account_id"`
-	Filename  string `db:"filename"`
-	Key       string `db:"key"`
+	ID        int64  `db:"id" jsonapi:"primary,key"`
+	AccountID string `db:"account_id" jsonapi:"attr,account_id"`
+	Filename  string `db:"filename" jsonapi:"attr,filename"`
+	Key       string `db:"key" jsonapi:"attr,key"`
 }
 
 type KeyQ struct {
@@ -25,10 +25,14 @@ func (q *KeyQ) Create(key *Key) (bool, error) {
 		"account_id": key.AccountID,
 		"filename":   key.Filename,
 		"key":        key.Key,
-	})
-	_, err := q.Exec(stmt)
+	}).Suffix("returning id")
+
+	err := q.Repo.Get(&(key.ID), stmt)
 	if err != nil {
 		if strings.Contains(err.Error(), "unique_account_id_filename") {
+			return false, nil
+		}
+		if err == sql.ErrNoRows {
 			return false, nil
 		}
 		return false, err

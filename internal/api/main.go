@@ -27,7 +27,7 @@ func Router(entry *log.Entry, doorman *doorman.Doorman, keychainQ data.KeychainQ
 
 	r.Route("/users/{address}/keys", func(r chi.Router) {
 		r.Use(
-			CheckAllowed("address", doorman.SignerOf),
+			CheckAllowed("address", doorman.SignerOf, doorman.MasterSigner),
 			KeychainQCtx(keychainQ),
 		)
 

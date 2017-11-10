@@ -3,33 +3,42 @@ package handlers
 import (
 	"net/http"
 
+	"encoding/json"
+
 	"github.com/go-chi/chi"
+	. "github.com/go-ozzo/ozzo-validation"
+	"github.com/pkg/errors"
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
 	"gitlab.com/tokend/keychain/internal/keys"
 )
 
 type CreateKeyRequest struct {
-	Address  string
-	Filename string
+	Address  string `json:"-"`
+	Filename string `json:"filename"`
 }
 
-func NewCreateKeyRequest(r *http.Request) *CreateKeyRequest {
-	return &CreateKeyRequest{
-		Address:  chi.URLParam(r, "address"),
-		Filename: chi.URLParam(r, "filename"),
+func NewCreateKeyRequest(r *http.Request) (CreateKeyRequest, error) {
+	request := CreateKeyRequest{
+		Address: chi.URLParam(r, "address"),
 	}
+	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
+		return request, errors.Wrap(err, "failed to unmarshal")
+	}
+	return request, request.Validate()
 }
 
 func (r *CreateKeyRequest) Validate() error {
-	return nil
+	return ValidateStruct(r,
+		Field(&r.Address, Required),
+		Field(&r.Filename, Required))
 }
 
 func CreateKey(w http.ResponseWriter, r *http.Request) {
-	request := NewCreateKeyRequest(r)
-	if err := request.Validate(); err != nil {
-		// TODO bad request
-		panic(400)
+	request, err := NewCreateKeyRequest(r)
+	if err != nil {
+		ape.RenderErr(w, problems.BadRequest(err)...)
+		return
 	}
 
 	// generate encryption key
@@ -54,5 +63,5 @@ func CreateKey(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// render response
-	ape.Render(w, key)
+	ape.Render(w, &key)
 }

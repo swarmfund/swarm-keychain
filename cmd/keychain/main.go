@@ -35,7 +35,7 @@ func main() {
 	})
 	rootCmd.PersistentFlags().StringVar(&configFile, "config", "config.yaml", "config file")
 	rootCmd.AddCommand(runCmd)
-	rootCmd.AddCommand(keychainCmd)
+	rootCmd.AddCommand(migrateCmd)
 	rootCmd.Execute()
 }
 

@@ -75,7 +75,6 @@ func (a *App) Serve() {
 	router := api.Router(
 		log.WithField("service", "api"),
 		&doorman.Doorman{
-			PassAllChecks: true,
 			AccountQ: a.CoreAccountQ(),
 		},
 		a.KeychainQ(),

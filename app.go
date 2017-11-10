@@ -6,17 +6,16 @@ import (
 	"sync"
 	"time"
 
-	"gitlab.com/tokend/go/build"
+	"github.com/pkg/errors"
+	coreHelper "gitlab.com/tokend/go/core"
+	"gitlab.com/tokend/go/doorman"
 	"gitlab.com/tokend/keychain/config"
-	coreHelper "gitlab.com/tokend/keychain/core"
 	"gitlab.com/tokend/keychain/db2"
 	"gitlab.com/tokend/keychain/db2/core"
 	"gitlab.com/tokend/keychain/db2/keychain"
+	"gitlab.com/tokend/keychain/internal/api"
 	"gitlab.com/tokend/keychain/log"
-	"gitlab.com/tokend/keychain/render/sse"
 	"golang.org/x/net/context"
-	"golang.org/x/net/http2"
-	"gopkg.in/tylerb/graceful.v1"
 )
 
 // You can override this variable using: gb build -ldflags "-X main.version aabbccdd"
@@ -24,14 +23,16 @@ var version = ""
 
 // App represents the root of the state of a horizon instance.
 type App struct {
-	config         config.Config
-	web            *Web
-	coreQ          core.QInterface
-	keychainQ      *keychain.Q
-	ctx            context.Context
-	cancel         func()
-	ticks          *time.Ticker
-	CoreInfo       coreHelper.Info
+	CoreInfo *coreHelper.Info
+
+	core      *coreHelper.Connector
+	_config   config.Config
+	coreQ     core.QInterface
+	keychainQ *keychain.Q
+	ctx       context.Context
+	cancel    func()
+	ticks     *time.Ticker
+
 	horizonVersion string
 }
 
@@ -43,47 +44,52 @@ func SetVersion(v string) {
 
 // NewApp constructs an new App instance from the provided config.
 func NewApp(config config.Config) (*App, error) {
-
-	result := &App{config: config}
-	result.horizonVersion = version
-	result.CoreInfo.NetworkPassphrase = build.DefaultNetwork.Passphrase
-	result.ticks = time.NewTicker(1 * time.Second)
-	result.init()
-	return result, nil
-}
-
-// Serve starts the horizon web server, binding it to a socket, setting up
-// the shutdown signals.
-func (a *App) Serve() {
-
-	a.web.router.Compile()
-	http.Handle("/", a.web.router)
-
-	addr := fmt.Sprintf(":%d", a.config.Port)
-
-	srv := &graceful.Server{
-		Timeout: 10 * time.Second,
-
-		Server: &http.Server{
-			Addr:    addr,
-			Handler: http.DefaultServeMux,
-		},
-
-		ShutdownInitiated: func() {
-			log.Info("received signal, gracefully stopping")
-			a.Close()
-		},
+	app := &App{
+		_config: config,
 	}
 
-	http2.ConfigureServer(srv.Server, nil)
-
-	log.Infof("Starting horizon on %s", addr)
-
-	go a.run()
-
-	err := srv.ListenAndServe()
+	coreConnector, err := coreHelper.NewConnector(http.DefaultClient, config.Core().URL)
 	if err != nil {
-		log.Panic(err)
+		return nil, errors.Wrap(err, "failed to get core connector")
+	}
+	app.core = coreConnector
+
+	app.ticks = time.NewTicker(1 * time.Second)
+	app.init()
+	return app, nil
+}
+
+func (a *App) Config() config.Config {
+	return a._config
+}
+
+func (a *App) CoreAccountQ() *core.AccountQ {
+	return core.NewAccountQ(a.CoreRepo(a.ctx))
+}
+
+func (a *App) Serve() {
+	addr := fmt.Sprintf("%s:%d", a.Config().HTTP().Host, a.Config().HTTP().Port)
+
+	router := api.Router(
+		log.WithField("service", "api"),
+		&doorman.Doorman{
+			AccountQ: a.CoreAccountQ(),
+		},
+		a.KeychainQ(),
+	)
+
+	srv := &http.Server{
+		Addr:    addr,
+		Handler: router,
+	}
+
+	log.WithFields(log.F{
+		"addr":    addr,
+		"service": "api",
+	}).Info("listening")
+
+	if err := srv.ListenAndServe(); err != nil {
+		panic(err)
 	}
 }
 
@@ -103,8 +109,10 @@ func (a *App) CoreQ() core.QInterface {
 	return a.coreQ
 }
 
-func (a *App) KeychainQ() *keychain.Q {
-	return a.keychainQ
+func (a *App) KeychainQ() *keychain.KeyQ {
+	return &keychain.KeyQ{
+		Repo: a.KeychainRepo(a.ctx),
+	}
 }
 
 // CoreRepo returns a new repo that loads data from the stellar core
@@ -120,16 +128,12 @@ func (a *App) KeychainRepo(ctx context.Context) *db2.Repo {
 // UpdateStellarCoreInfo updates the value of coreVersion and networkPassphrase
 // from the Stellar core API.
 func (a *App) UpdateStellarCoreInfo() {
-	if a.config.StellarCoreURL == "" {
-		return
-	}
-
-	var err error
-	a.CoreInfo, err = coreHelper.GetStellarCoreInfo(a.config.StellarCoreURL)
+	info, err := a.core.GetCoreInfo()
 	if err != nil {
 		log.WithField("service", "core-info").WithError(err).Error("could not load stellar-core info")
 		return
 	}
+	a.CoreInfo = info
 }
 
 // Tick triggers horizon to update all of it's background processes such as
@@ -141,8 +145,6 @@ func (a *App) Tick() {
 	wg.Add(1)
 	go func() { a.UpdateStellarCoreInfo(); wg.Done() }()
 	wg.Wait()
-
-	sse.Tick()
 
 	log.Debug("finished ticking app")
 }

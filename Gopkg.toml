@@ -89,7 +89,7 @@
   name = "github.com/zenazn/goji"
   version = "1.0.0"
 
-[[constraint]]
+[[override]]
   name = "gitlab.com/distributed_lab/logan"
   version = "2.0.0"
 

@@ -1,0 +1,9 @@
+keychain:
+  database_url: postgres://postgres@localhost/keychain?sslmode=disable
+
+core:
+  database_url: postgres://postgres@localhost/core?sslmode=disable
+  url: http://localhost:8080
+
+log:
+  level: info

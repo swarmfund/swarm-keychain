@@ -32,16 +32,34 @@
   version = "v1.4.2"
 
 [[projects]]
+  name = "github.com/go-chi/chi"
+  packages = ["."]
+  revision = "f7c66f685bcab06bcce78ac212c5f3553c063d19"
+  version = "v3.3.0"
+
+[[projects]]
   branch = "master"
   name = "github.com/go-errors/errors"
   packages = ["."]
   revision = "3afebba5a48dbc89b574d890b6b34d9ee10b4785"
 
 [[projects]]
+  name = "github.com/go-ozzo/ozzo-validation"
+  packages = ["."]
+  revision = "85dcd8368eba387e65a03488b003e233994e87e9"
+  version = "v3.3"
+
+[[projects]]
   branch = "master"
   name = "github.com/goji/context"
   packages = ["."]
   revision = "68b83f7b0439800daff361aeff573ecad1b26cbe"
+
+[[projects]]
+  name = "github.com/google/jsonapi"
+  packages = ["."]
+  revision = "46d3ced0434461be12e555852e2f1a9ed382e139"
+  version = "1.0.0"
 
 [[projects]]
   branch = "master"
@@ -114,12 +132,6 @@
   name = "github.com/mitchellh/mapstructure"
   packages = ["."]
   revision = "06020f85339e21b2478f756a78e295255ffa4d6a"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/multiplay/go-slack"
-  packages = [".","chat","lrhook","webhook"]
-  revision = "2ca6009c6de1deb2a2f77a80ee09194b66c3473f"
 
 [[projects]]
   branch = "master"
@@ -230,6 +242,24 @@
   version = "v1.0"
 
 [[projects]]
+  name = "gitlab.com/distributed_lab/ape"
+  packages = [".","problems"]
+  revision = "5e0ac955031f0365592d326c8c1bfc23bff2f34d"
+  version = "v0.1"
+
+[[projects]]
+  branch = "master"
+  name = "gitlab.com/distributed_lab/corer"
+  packages = ["."]
+  revision = "c379e0e1fad2b83654437a6764ac1ce7bd1c0660"
+
+[[projects]]
+  branch = "master"
+  name = "gitlab.com/distributed_lab/figure"
+  packages = ["."]
+  revision = "a02d226a1f2467982746bdeb284c58a53f4557aa"
+
+[[projects]]
   name = "gitlab.com/distributed_lab/logan"
   packages = ["."]
   revision = "922f51806a13e6afc6603df5923730b60bb7dfea"
@@ -237,9 +267,9 @@
 
 [[projects]]
   name = "gitlab.com/tokend/go"
-  packages = ["amount","build","crc16","hash","keypair","network","signcontrol","strkey","xdr"]
-  revision = "de4f90f3d3b23eb4194116241708a4d483b496be"
-  version = "v1"
+  packages = ["core","crc16","doorman","hash","keypair","network","resources","signcontrol","strkey","xdr"]
+  revision = "e6509ac868fbc16aabf3101342eecdae0efaa989"
+  version = "v1.2"
 
 [[projects]]
   branch = "master"
@@ -250,7 +280,7 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
-  packages = ["context","http2","http2/hpack","idna","lex/httplex"]
+  packages = ["context"]
   revision = "a337091b0525af65de94df2eb7e98bd9962dcbe2"
 
 [[projects]]
@@ -262,26 +292,14 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/text"
-  packages = ["collate","collate/build","internal/colltab","internal/gen","internal/tag","internal/triegen","internal/ucd","language","secure/bidirule","transform","unicode/bidi","unicode/cldr","unicode/norm","unicode/rangetable"]
+  packages = ["internal/gen","internal/triegen","internal/ucd","transform","unicode/cldr","unicode/norm"]
   revision = "88f656faf3f37f690df1a32515b479415e1a6769"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/time"
-  packages = ["rate"]
-  revision = "6dc17368e09b0e8634d71cac8168d853e869a0c7"
 
 [[projects]]
   name = "gopkg.in/gorp.v1"
   packages = ["."]
   revision = "c87af80f3cc5036b55b83d77171e156791085e2e"
   version = "v1.7.1"
-
-[[projects]]
-  name = "gopkg.in/tylerb/graceful.v1"
-  packages = ["."]
-  revision = "4654dfbb6ad53cb5e27f37d99b02e16c1872fbbb"
-  version = "v1.2.15"
 
 [[projects]]
   branch = "v2"
@@ -292,6 +310,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "233d1d2ed071bc2682c45ccd11be77dc013ee85c380b146d7aaa00df1f0d0f30"
+  inputs-digest = "b9f3a5d19e0209045a99d155692a2d1684bf706f51e402a31a07ed4926d69628"
   solver-name = "gps-cdcl"
   solver-version = 1

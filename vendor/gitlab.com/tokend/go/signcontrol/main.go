@@ -1,7 +1,6 @@
 package signcontrol
 
 import (
-	"errors"
 	"net/http"
 	"strconv"
 	"time"
@@ -17,22 +16,14 @@ import (
 	"gitlab.com/tokend/go/xdr"
 )
 
-var (
-	ErrNotSigned  = errors.New("request is not signed")
-	ErrValidUntil = errors.New("valid until is not valid")
-	ErrExpired    = errors.New("expired signature")
-	ErrSignerKey  = errors.New("signer key is not valid")
-	ErrSignature  = errors.New("signature is not valid")
-	ErrNotAllowed = errors.New("not allowed")
-)
+
 
 const (
 	SignatureHeader     = "x-authsignature"
 	HMACSignatureHeader = "x-hmac-signature"
 	PublicKeyHeader     = "x-authpublickey"
 	ValidUntilHeader    = "x-authvaliduntilltimestamp"
-
-	ValidUntilOffset = 60
+	ValidUntilOffset    = 60
 )
 
 func SignRequest(request *http.Request, kp keypair.KP) error {

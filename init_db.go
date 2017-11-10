@@ -8,7 +8,7 @@ import (
 )
 
 func initKeychainDb(app *App) {
-	repo, err := db2.Open(app.config.KeychainDatabaseURL)
+	repo, err := db2.Open(app.Config().Keychain().DatabaseURL)
 
 	if err != nil {
 		log.Panic(err)
@@ -20,7 +20,7 @@ func initKeychainDb(app *App) {
 }
 
 func initCoreDb(app *App) {
-	repo, err := db2.Open(app.config.StellarCoreDatabaseURL)
+	repo, err := db2.Open(app.Config().Core().DatabaseURL)
 
 	if err != nil {
 		log.Panic(err)

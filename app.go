@@ -7,14 +7,14 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	coreHelper "gitlab.com/tokend/go/core"
-	"gitlab.com/tokend/go/doorman"
-	"gitlab.com/tokend/keychain/config"
-	"gitlab.com/tokend/keychain/db2"
-	"gitlab.com/tokend/keychain/db2/core"
-	"gitlab.com/tokend/keychain/db2/keychain"
-	"gitlab.com/tokend/keychain/internal/api"
-	"gitlab.com/tokend/keychain/log"
+	coreHelper "gitlab.com/swarmfund/go/core"
+	"gitlab.com/swarmfund/go/doorman"
+	"gitlab.com/swarmfund/keychain/config"
+	"gitlab.com/swarmfund/keychain/db2"
+	"gitlab.com/swarmfund/keychain/db2/core"
+	"gitlab.com/swarmfund/keychain/db2/keychain"
+	"gitlab.com/swarmfund/keychain/internal/api"
+	"gitlab.com/swarmfund/keychain/log"
 	"golang.org/x/net/context"
 )
 

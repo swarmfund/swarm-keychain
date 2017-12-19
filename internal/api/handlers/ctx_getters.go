@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	"gitlab.com/tokend/keychain/internal/api/data"
-	"gitlab.com/tokend/keychain/log"
+	"gitlab.com/swarmfund/keychain/internal/api/data"
+	"gitlab.com/swarmfund/keychain/log"
 )
 
 type CtxKey int

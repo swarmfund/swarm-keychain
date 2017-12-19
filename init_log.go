@@ -1,7 +1,7 @@
 package keychain
 
 import (
-	"gitlab.com/tokend/keychain/log"
+	"gitlab.com/swarmfund/keychain/log"
 )
 
 // initLog initialized the logging subsystem, attaching app.log and

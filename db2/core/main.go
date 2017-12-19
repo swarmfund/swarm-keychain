@@ -3,8 +3,8 @@
 package core
 
 import (
-	"gitlab.com/tokend/go/xdr"
-	"gitlab.com/tokend/keychain/db2"
+	"gitlab.com/swarmfund/go/xdr"
+	"gitlab.com/swarmfund/keychain/db2"
 	"github.com/jmoiron/sqlx"
 	sq "github.com/lann/squirrel"
 )

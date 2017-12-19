@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"gitlab.com/tokend/keychain/internal/api/handlers"
-	"gitlab.com/tokend/keychain/log"
+	"gitlab.com/swarmfund/keychain/internal/api/handlers"
+	"gitlab.com/swarmfund/keychain/log"
 )
 
 func LogCtx(log *log.Entry) func(http.Handler) http.Handler {

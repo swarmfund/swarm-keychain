@@ -1,10 +1,10 @@
 package keychain
 
 import (
-	"gitlab.com/tokend/keychain/db2"
-	"gitlab.com/tokend/keychain/db2/core"
-	"gitlab.com/tokend/keychain/db2/keychain"
-	"gitlab.com/tokend/keychain/log"
+	"gitlab.com/swarmfund/keychain/db2"
+	"gitlab.com/swarmfund/keychain/db2/core"
+	"gitlab.com/swarmfund/keychain/db2/keychain"
+	"gitlab.com/swarmfund/keychain/log"
 )
 
 func initKeychainDb(app *App) {

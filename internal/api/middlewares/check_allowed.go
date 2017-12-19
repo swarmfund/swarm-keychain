@@ -6,8 +6,8 @@ import (
 	"github.com/go-chi/chi"
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
-	"gitlab.com/tokend/go/doorman"
-	"gitlab.com/tokend/go/signcontrol"
+	"gitlab.com/swarmfund/go/doorman"
+	"gitlab.com/swarmfund/go/signcontrol"
 )
 
 func CheckAllowed(key string, checks ...func(string) doorman.SignerConstraint) func(http.Handler) http.Handler {

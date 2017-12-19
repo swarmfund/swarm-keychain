@@ -1,7 +1,7 @@
 package core
 
 import (
-	"gitlab.com/tokend/keychain/db2"
+	"gitlab.com/swarmfund/keychain/db2"
 	sq "github.com/lann/squirrel"
 )
 

@@ -3,7 +3,7 @@ package sqx
 import (
 	"testing"
 
-	"gitlab.com/tokend/keychain/test"
+	"gitlab.com/swarmfund/keychain/test"
 	sq "github.com/lann/squirrel"
 )
 

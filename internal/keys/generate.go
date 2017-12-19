@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 
 	"github.com/pkg/errors"
-	"gitlab.com/tokend/keychain/db2/keychain"
+	"gitlab.com/swarmfund/keychain/db2/keychain"
 )
 
 func Generate(address, filename string) (keychain.Key, error) {

@@ -10,7 +10,7 @@ import (
 	"github.com/pkg/errors"
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
-	"gitlab.com/tokend/keychain/internal/keys"
+	"gitlab.com/swarmfund/keychain/internal/keys"
 )
 
 type CreateKeyRequest struct {

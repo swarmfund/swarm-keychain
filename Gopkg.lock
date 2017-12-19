@@ -2,12 +2,6 @@
 
 
 [[projects]]
-  branch = "default"
-  name = "bitbucket.org/ww/goautoneg"
-  packages = ["."]
-  revision = "75cd24fc2f2c2a2088577d12123ddee5f54e0675"
-
-[[projects]]
   branch = "master"
   name = "github.com/agl/ed25519"
   packages = [".","edwards25519"]
@@ -48,12 +42,6 @@
   packages = ["."]
   revision = "85dcd8368eba387e65a03488b003e233994e87e9"
   version = "v3.3"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/goji/context"
-  packages = ["."]
-  revision = "68b83f7b0439800daff361aeff573ecad1b26cbe"
 
 [[projects]]
   name = "github.com/google/jsonapi"
@@ -236,12 +224,6 @@
   version = "v1.1.4"
 
 [[projects]]
-  name = "github.com/zenazn/goji"
-  packages = ["web","web/middleware","web/mutil"]
-  revision = "64eb34159fe53473206c2b3e70fe396a639452f2"
-  version = "v1.0"
-
-[[projects]]
   name = "gitlab.com/distributed_lab/ape"
   packages = [".","problems"]
   revision = "5e0ac955031f0365592d326c8c1bfc23bff2f34d"
@@ -266,10 +248,10 @@
   version = "v2.0"
 
 [[projects]]
-  name = "gitlab.com/tokend/go"
-  packages = ["core","crc16","doorman","hash","keypair","network","resources","signcontrol","strkey","xdr"]
-  revision = "e6509ac868fbc16aabf3101342eecdae0efaa989"
-  version = "v1.2"
+  branch = "master"
+  name = "gitlab.com/swarmfund/go"
+  packages = ["core","crc16","doorman","doorman/data","hash","keypair","network","resources","signcontrol","strkey","xdr"]
+  revision = "f9e58004d49b2d542c852aa37ca140f1ee831be9"
 
 [[projects]]
   branch = "master"
@@ -310,6 +292,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "b9f3a5d19e0209045a99d155692a2d1684bf706f51e402a31a07ed4926d69628"
+  inputs-digest = "ea2128fec4fbbfce8128ec6181774fa535908a0fb8ded76f506114e570cbc4f8"
   solver-name = "gps-cdcl"
   solver-version = 1

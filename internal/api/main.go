@@ -6,11 +6,11 @@ import (
 	"github.com/go-chi/chi"
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
-	"gitlab.com/tokend/go/doorman"
-	"gitlab.com/tokend/keychain/internal/api/data"
-	"gitlab.com/tokend/keychain/internal/api/handlers"
-	. "gitlab.com/tokend/keychain/internal/api/middlewares"
-	"gitlab.com/tokend/keychain/log"
+	"gitlab.com/swarmfund/go/doorman"
+	"gitlab.com/swarmfund/keychain/internal/api/data"
+	"gitlab.com/swarmfund/keychain/internal/api/handlers"
+	. "gitlab.com/swarmfund/keychain/internal/api/middlewares"
+	"gitlab.com/swarmfund/keychain/log"
 )
 
 func Router(entry *log.Entry, doorman *doorman.Doorman, keychainQ data.KeychainQ) chi.Router {

@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/spf13/cobra"
-	"gitlab.com/tokend/keychain"
-	"gitlab.com/tokend/keychain/config"
-	"gitlab.com/tokend/keychain/log"
+	"gitlab.com/swarmfund/keychain"
+	"gitlab.com/swarmfund/keychain/config"
+	"gitlab.com/swarmfund/keychain/log"
 )
 
 var (

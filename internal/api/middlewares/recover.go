@@ -6,8 +6,8 @@ import (
 
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
-	"gitlab.com/tokend/keychain/errors"
-	"gitlab.com/tokend/keychain/internal/api/handlers"
+	"gitlab.com/swarmfund/keychain/errors"
+	"gitlab.com/swarmfund/keychain/internal/api/handlers"
 )
 
 func Recover(next http.Handler) http.Handler {

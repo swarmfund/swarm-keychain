@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"gitlab.com/tokend/keychain/internal/api/data"
-	"gitlab.com/tokend/keychain/internal/api/handlers"
+	"gitlab.com/swarmfund/keychain/internal/api/data"
+	"gitlab.com/swarmfund/keychain/internal/api/handlers"
 )
 
 func KeychainQCtx(q data.KeychainQ) func(http.Handler) http.Handler {

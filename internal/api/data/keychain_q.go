@@ -6,3 +6,7 @@ type KeychainQ interface {
 	Create(key *keychain.Key) (bool, error)
 	Get(address, filename string) (*keychain.Key, error)
 }
+
+type CoreInfoI interface {
+	GetMasterAccountID() string
+}

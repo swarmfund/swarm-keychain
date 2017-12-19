@@ -1,7 +1,7 @@
 package corer
 
 import (
-	"gitlab.com/distributed_lab/logan"
+	"gitlab.com/distributed_lab/logan/v3/errors"
 	"net/http"
 	"net/url"
 )
@@ -30,7 +30,7 @@ type connector struct {
 func NewConnector(httpClient *http.Client, coreURL string) (Connector, error) {
 	parsedCoreURL, err := url.Parse(coreURL)
 	if err != nil {
-		return nil, logan.Wrap(err, "Invalid core URL")
+		return nil, errors.Wrap(err, "Invalid core URL")
 	}
 
 	return &connector{

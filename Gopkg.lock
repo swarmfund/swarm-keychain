@@ -56,12 +56,6 @@
   revision = "444abdf920945de5d4a977b572bcc6c674d1e4eb"
 
 [[projects]]
-  name = "github.com/guregu/null"
-  packages = ["."]
-  revision = "5d2d1e5a9e25088fb9cc0b0f7cb566250eb42bba"
-  version = "v3.2.0"
-
-[[projects]]
   branch = "master"
   name = "github.com/hashicorp/hcl"
   packages = [".","hcl/ast","hcl/parser","hcl/scanner","hcl/strconv","hcl/token","json/parser","json/scanner","json/token"]
@@ -212,14 +206,8 @@
   version = "v1.0.0"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/stretchr/objx"
-  packages = ["."]
-  revision = "1a9d0bb9f541897e62256577b352fdbc1fb4fd94"
-
-[[projects]]
   name = "github.com/stretchr/testify"
-  packages = ["assert","mock","require"]
+  packages = ["assert","require"]
   revision = "69483b4bd14f5845b5a1e55bca19e954e827f1d0"
   version = "v1.1.4"
 
@@ -233,7 +221,7 @@
   branch = "master"
   name = "gitlab.com/distributed_lab/corer"
   packages = ["."]
-  revision = "c379e0e1fad2b83654437a6764ac1ce7bd1c0660"
+  revision = "cbfb465258955230864e0a76aba0ff2738000782"
 
 [[projects]]
   branch = "master"
@@ -243,9 +231,9 @@
 
 [[projects]]
   name = "gitlab.com/distributed_lab/logan"
-  packages = ["."]
-  revision = "922f51806a13e6afc6603df5923730b60bb7dfea"
-  version = "v2.0"
+  packages = ["v3/errors","v3/fields"]
+  revision = "7ce07a32dee4cb3a90778d6e70ab6e9eb17fe1e3"
+  version = "v3.2"
 
 [[projects]]
   branch = "master"
@@ -292,6 +280,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ea2128fec4fbbfce8128ec6181774fa535908a0fb8ded76f506114e570cbc4f8"
+  inputs-digest = "55e00233ac6ed46433d89be43986b0a3f3e2679170053c1cead9af522f778646"
   solver-name = "gps-cdcl"
   solver-version = 1

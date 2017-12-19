@@ -1,7 +1,7 @@
 package corer
 
 import (
-	"gitlab.com/distributed_lab/logan"
+	"gitlab.com/distributed_lab/logan/v3/errors"
 	"path"
 )
 
@@ -11,7 +11,7 @@ func (c *connector) GetCoreInfo(infoResponse interface{}) error {
 	coreURL.Path = path.Join(coreURL.Path, "info")
 	err := c.getJSON(coreURL.String(), infoResponse)
 	if err != nil {
-		return logan.Wrap(err, "Failed to get json")
+		return errors.Wrap(err, "Failed to get json")
 	}
 
 	return nil

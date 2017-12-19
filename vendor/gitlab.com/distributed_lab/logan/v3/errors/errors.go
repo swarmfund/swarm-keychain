@@ -1,16 +1,16 @@
 package errors
 
 import (
-	"fmt"
 	"github.com/pkg/errors"
+	"gitlab.com/distributed_lab/logan/v3/fields"
 )
 
 // FromPanic extracts the err from the result of a recover() call.
-// DEPRECATED
+// If rec is not actually an error - a new error will be created, formatting the `rec` as "%s".
 func FromPanic(rec interface{}) error {
 	err, ok := rec.(error)
 	if !ok {
-		err = fmt.Errorf("%s", rec)
+		err = errors.Errorf("%s", rec)
 	}
 
 	return err
@@ -18,17 +18,61 @@ func FromPanic(rec interface{}) error {
 
 // New returns an error with the supplied message.
 // New also records the stack trace at the point it was called.
-// DEPRECATED
 func New(msg string) error {
 	return errors.New(msg)
 }
 
+// Errorf formats according to a format specifier and returns the string
+// as a value that satisfies error.
+// Errorf also records the stack trace at the point it was called.
+func Errorf(format string, args ...interface{}) error {
+	return errors.Errorf(format, args)
+}
+
+// WithStack annotates err with a stack trace at the point WithStack was called.
+// If err is nil, WithStack returns nil.
+func WithStack(err error) error {
+	return errors.WithStack(err)
+}
+
 // Wrap returns an error annotating err with a stack trace
 // at the point Wrap is called, and the supplied message.
+//
+// Fields can optionally be added. If provided multiple - fields will be merged.
+//
 // If err is nil, Wrap returns nil.
-// DEPRECATED
-func Wrap(base error, msg string) error {
-	return errors.Wrap(base, msg)
+func Wrap(err error, msg string, errorFields... map[string]interface{}) error {
+	wrapped := errors.Wrap(err, msg)
+	if wrapped == nil {
+		return nil
+	}
+
+	var mergedFields map[string]interface{}
+	for _, f := range errorFields {
+		mergedFields = fields.Merge(mergedFields, f)
+	}
+
+	return &withFields{
+		wrapped,
+		mergedFields,
+	}
+}
+
+// From returns an error annotating err with a stack trace
+// at the point From is called, and the provided fields.
+//
+// If err is nil, From returns nil.
+func From(err error, fields map[string]interface{}) error {
+	withStack := errors.WithStack(err)
+
+	if withStack == nil {
+		return nil
+	}
+
+	return &withFields{
+		withStack,
+		fields,
+	}
 }
 
 // Cause returns the underlying cause of the error, if possible.
@@ -42,7 +86,6 @@ func Wrap(base error, msg string) error {
 // If the error does not implement Cause, the original error will
 // be returned. If the error is nil, nil will be returned without further
 // investigation.
-// DEPRECATED
 func Cause(err error) error {
 	return errors.Cause(err)
 }
@@ -56,21 +99,20 @@ func Cause(err error) error {
 //
 // If the error and all of its nested causes do not implement GetFields, empty fields map will
 // be returned.
-// DEPRECATED
-func GetFields(err error) F {
+func GetFields(err error) map[string]interface{} {
 	type fieldsProvider interface {
-		GetFields() F
+		GetFields() eFields
 	}
 
 	type causer interface {
 		Cause() error
 	}
 
-	f := F{}
+	mergedResult := eFields{}
 	for err != nil {
 		fError, ok := err.(fieldsProvider)
 		if ok {
-			f = f.AddFields(fError.GetFields())
+			mergedResult = fields.Merge(mergedResult, fError.GetFields())
 		}
 
 		cause, ok := err.(causer)
@@ -80,26 +122,22 @@ func GetFields(err error) F {
 		err = cause.Cause()
 	}
 
-	return f
+	return mergedResult
 }
 
-// DEPRECATED
 type withFields struct {
 	error
-	F
+	eFields
 }
 
-// DEPRECATED
 func (w *withFields) Error() string {
 	return w.error.Error()
 }
 
-// DEPRECATED
-func (w *withFields) GetFields() F {
-	return w.F
+func (w *withFields) GetFields() eFields {
+	return w.eFields
 }
 
-// DEPRECATED
 func (w *withFields) Cause() error {
 	return w.error
 }

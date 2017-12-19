@@ -1,7 +1,7 @@
 package corer
 
 import (
-	"gitlab.com/distributed_lab/logan"
+	"gitlab.com/distributed_lab/logan/v3/errors"
 	"path"
 	"strconv"
 )
@@ -16,7 +16,7 @@ func (c *connector) CloseLedger(closeTime int64) error {
 
 	err := c.get(u.String(), "Forcing ledger to close...")
 	if err != nil {
-		return logan.Wrap(err, "Failed to perform request")
+		return errors.Wrap(err, "Failed to perform request")
 	}
 
 	return nil

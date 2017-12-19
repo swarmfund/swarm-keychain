@@ -89,10 +89,6 @@
   name = "github.com/zenazn/goji"
   version = "1.0.0"
 
-[[override]]
-  name = "gitlab.com/distributed_lab/logan"
-  version = "2.0.0"
-
 [[constraint]]
   name = "gitlab.com/swarmfund/go"
   branch = "master"

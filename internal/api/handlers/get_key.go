@@ -55,7 +55,7 @@ func GetKey(w http.ResponseWriter, r *http.Request) {
 	// check allowed
 	if err := Doorman(r,
 		doorman.SignerOf(request.Address),
-		doorman.SignerOf(CoreInfo(r).MasterAccountID),
+		doorman.SignerOf(CoreInfo(r).GetMasterAccountID()),
 	); err != nil {
 		RenderDoormanErr(w, err)
 		return

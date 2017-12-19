@@ -2,44 +2,20 @@
 
 
 [[projects]]
-  branch = "master"
-  name = "github.com/go-errors/errors"
-  packages = ["."]
-  revision = "8fa88b06e5974e97fbf9899a7f86a344bfd1f105"
-
-[[projects]]
   name = "github.com/pkg/errors"
   packages = ["."]
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
 
 [[projects]]
-  name = "github.com/sirupsen/logrus"
-  packages = ["."]
-  revision = "f006c2ac4710855cf0f916dd6b77acf6b048dc6e"
-  version = "v1.0.3"
-
-[[projects]]
   name = "gitlab.com/distributed_lab/logan"
-  packages = ["."]
-  revision = "8c83a803a9fe3fc0c9e428ae0b31c8f29210ac31"
-  version = "v0.092"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/crypto"
-  packages = ["ssh/terminal"]
-  revision = "edd5e9b0879d13ee6970a50153d85b8fec9f7686"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/sys"
-  packages = ["unix","windows"]
-  revision = "8dbc5d05d6edcc104950cc299a1ce6641235bc86"
+  packages = ["v3/errors","v3/fields"]
+  revision = "b8cfbf0cdfb9c7185cd426c24babaac54dcfbb82"
+  version = "v3.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "eee0ccdfe3f8bddfc7b1ee067982620b2f29ccb862279aa77fc2b13a027952fb"
+  inputs-digest = "838cff0c80217915a58d06ac9040d9f4b9a96b4ce8fbeab2cee2477d972ecf32"
   solver-name = "gps-cdcl"
   solver-version = 1

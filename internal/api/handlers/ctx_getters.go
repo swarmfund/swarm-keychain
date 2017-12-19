@@ -1,11 +1,9 @@
 package handlers
 
 import (
+	"context"
 	"net/http"
 
-	"context"
-
-	"gitlab.com/swarmfund/go/core"
 	"gitlab.com/swarmfund/go/doorman"
 	"gitlab.com/swarmfund/keychain/internal/api/data"
 	"gitlab.com/swarmfund/keychain/log"
@@ -54,11 +52,14 @@ func Doorman(r *http.Request, constraints ...doorman.SignerConstraint) error {
 	return d.Check(r, constraints...)
 }
 
-func CtxCoreInfo(ci *core.Info) func(context.Context) context.Context {
+func CtxCoreInfo(conn data.CoreInfoI) func(context.Context) context.Context {
 	return func(ctx context.Context) context.Context {
-		return context.WithValue(ctx, CtxKeyCoreInfo, *ci)
+		return context.WithValue(ctx, CtxKeyCoreInfo, conn)
 	}
 }
-func CoreInfo(r *http.Request) core.Info {
-	return r.Context().Value(CtxKeyCoreInfo).(core.Info)
+
+func CoreInfo(r *http.Request) data.CoreInfoI {
+	conn := r.Context().Value(CtxKeyCoreInfo)
+	c := conn.(data.CoreInfoI)
+	return c
 }

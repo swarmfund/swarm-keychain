@@ -1,11 +1,10 @@
-// Package core contains database record definitions useable for
+// Package core contains database record definitions usable for
 // reading rows from a Stellar Core db
 package core
 
 import (
 	"gitlab.com/swarmfund/go/xdr"
 	"gitlab.com/swarmfund/keychain/db2"
-	"github.com/jmoiron/sqlx"
 	sq "github.com/lann/squirrel"
 )
 
@@ -58,52 +57,52 @@ func (q *Q) GetRepo() *db2.Repo {
 type QInterface interface {
 	GetRepo() *db2.Repo
 	// DEPRECATED use `ByAddress` with explicit return value
-	AccountByAddress(dest interface{}, addy string) error
-	ExchangeName(addy string) (*string, error)
-	ByAddress(address string) (*Account, error)
-	SequencesForAddresses(dest interface{}, addys []string) error
-	SequenceProvider() *SequenceProvider
-	LedgerHeaderBySequence(dest interface{}, seq int32) error
+	//AccountByAddress(dest interface{}, addy string) error
+	//ExchangeName(addy string) (*string, error)
+	//ByAddress(address string) (*Account, error)
+	//SequencesForAddresses(dest interface{}, addys []string) error
+	//SequenceProvider() *SequenceProvider
+	//LedgerHeaderBySequence(dest interface{}, seq int32) error
 	ElderLedger(dest *int32) error
 	LatestLedger(dest interface{}) error
-	SignersByAddress(dest interface{}, addy string) error
-	PoliciesByExchangeID(dest interface{}, addy string) error
-	LimitsByAddress(dest interface{}, addy string) error
-	StatisticsByAddress(dest interface{}, addy string) error
-	BalancesByAddress(dest interface{}, addy string) error
-	BalanceByID(dest interface{}, bid string) error
-	TransactionByHash(dest interface{}, hash string) error
-	TransactionsByLedger(dest interface{}, seq int32) error
-	TransactionFeesByLedger(dest interface{}, seq int32) error
-	FeeEntries() FeeEntryQI
-	AccountTypeLimits() AccountTypeLimitsQI
-	Query(query sq.Sqlizer) (*sqlx.Rows, error)
-	NoRows(err error) bool
-	// Returns nil, if not found
-	FeeByTypeAsset(feeType int, asset string) (*FeeEntry, error)
-	LimitsByAccountType(accountType int) (*AccountTypeLimits, error)
-	Assets() ([]Asset, error)
-
-	AvailableEmissions(dest interface{}, masterAccountID string) error
-
-	EmissionRequestByExchangeAndRef(exchange, reference string) (*bool, error)
-
-	CoinsInCirculation(dest interface{}, masterAccountID string) error
-	CoinsInCirculationForAsset(dest interface{}, masterAccountID, asset string) error
+	//SignersByAddress(dest interface{}, addy string) error
+	//PoliciesByExchangeID(dest interface{}, addy string) error
+	//LimitsByAddress(dest interface{}, addy string) error
+	//StatisticsByAddress(dest interface{}, addy string) error
+	//BalancesByAddress(dest interface{}, addy string) error
+	//BalanceByID(dest interface{}, bid string) error
+	//TransactionByHash(dest interface{}, hash string) error
+	//TransactionsByLedger(dest interface{}, seq int32) error
+	//TransactionFeesByLedger(dest interface{}, seq int32) error
+	//FeeEntries() FeeEntryQI
+	//AccountTypeLimits() AccountTypeLimitsQI
+	//Query(query sq.Sqlizer) (*sqlx.Rows, error)
+	//NoRows(err error) bool
+	//// Returns nil, if not found
+	//FeeByTypeAsset(feeType int, asset string) (*FeeEntry, error)
+	//LimitsByAccountType(accountType int) (*AccountTypeLimits, error)
+	//Assets() ([]Asset, error)
+	//
+	//AvailableEmissions(dest interface{}, masterAccountID string) error
+	//
+	//EmissionRequestByExchangeAndRef(exchange, reference string) (*bool, error)
+	//
+	//CoinsInCirculation(dest interface{}, masterAccountID string) error
+	//CoinsInCirculationForAsset(dest interface{}, masterAccountID, asset string) error
 
 	// should probably be separate accounts repo
 	Accounts() QInterface
 	ForTypes(types []xdr.AccountType) QInterface
 	Filter(dest interface{}) error
-
-	CoinsEmissions() *CoinsEmissionQ
-	Trusts() *TrustQ
-
-	Offers() *OfferQ
-	OrderBook() *OrderBookQ
-
-	AssetPair(base, quote string) (*AssetPair, error)
-	AssetPairs() ([]AssetPair, error)
+	//
+	//CoinsEmissions() *CoinsEmissionQ
+	//Trusts() *TrustQ
+	//
+	//Offers() *OfferQ
+	//OrderBook() *OrderBookQ
+	//
+	//AssetPair(base, quote string) (*AssetPair, error)
+	//AssetPairs() ([]AssetPair, error)
 }
 
 // PriceLevel represents an aggregation of offers to trade at a certain

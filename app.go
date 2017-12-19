@@ -72,10 +72,9 @@ func (a *App) Serve() {
 
 	router := api.Router(
 		log.WithField("service", "api"),
-		&doorman.Doorman{
-			AccountQ: a.CoreAccountQ(),
-		},
+		doorman.New(false, a.CoreAccountQ()),
 		a.KeychainQ(),
+		a.GetCoreInfo,
 	)
 
 	srv := &http.Server{
@@ -134,6 +133,10 @@ func (a *App) UpdateStellarCoreInfo() {
 		return
 	}
 	a.CoreInfo = info
+}
+
+func (a *App) GetCoreInfo() *coreHelper.Info {
+	return a.CoreInfo
 }
 
 // Tick triggers horizon to update all of it's background processes such as

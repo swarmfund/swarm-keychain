@@ -37,13 +37,6 @@ func (q *Q) ForTypes(types []xdr.AccountType) QInterface {
 	if q.err != nil {
 		return q
 	}
-	for _, t := range types {
-		if t == xdr.AccountTypeExchange {
-			// master is our secret exchange
-			types = append(types, xdr.AccountTypeMaster)
-			break
-		}
-	}
 	q.sql = q.sql.Where(sq.Eq{"account_type": types})
 	return q
 }

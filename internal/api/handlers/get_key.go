@@ -5,8 +5,11 @@ import (
 
 	"github.com/go-chi/chi"
 	. "github.com/go-ozzo/ozzo-validation"
+	"github.com/pkg/errors"
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
+	"gitlab.com/swarmfund/go/doorman"
+	"gitlab.com/swarmfund/go/signcontrol"
 )
 
 type GetKeyRequest struct {
@@ -49,7 +52,27 @@ func GetKey(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// check allowed
+	if err := Doorman(r,
+		doorman.SignerOf(request.Address),
+		doorman.SignerOf(CoreInfo(r).MasterAccountID),
+	); err != nil {
+		RenderDoormanErr(w, err)
+		return
+	}
+
 	// render response
 	// TODO render JWK resource
 	ape.Render(w, key)
+}
+
+func RenderDoormanErr(w http.ResponseWriter, err error) {
+	switch err {
+	case signcontrol.ErrNotAllowed, signcontrol.ErrNotSigned:
+		ape.RenderErr(w, problems.NotAllowed())
+	case nil:
+		panic("expected not nil error")
+	default:
+		panic(errors.Wrap(err, "unexpected doorman error"))
+	}
 }

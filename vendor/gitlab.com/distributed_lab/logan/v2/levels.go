@@ -2,17 +2,25 @@ package logan
 
 import "github.com/sirupsen/logrus"
 
+// DEPRECATED
 type Level logrus.Level
 
 const (
+	// DEPRECATED
 	PanicLevel Level = iota
+	// DEPRECATED
 	FatalLevel
+	// DEPRECATED
 	ErrorLevel
+	// DEPRECATED
 	WarnLevel
+	// DEPRECATED
 	InfoLevel
+	// DEPRECATED
 	DebugLevel
 )
 
+// DEPRECATED
 var AllLevels = []Level{
 	PanicLevel,
 	FatalLevel,
@@ -22,6 +30,7 @@ var AllLevels = []Level{
 	DebugLevel,
 }
 
+// DEPRECATED
 func ParseLevel(level string) (Level, error) {
 	l, err := logrus.ParseLevel(level)
 	return Level(l), err

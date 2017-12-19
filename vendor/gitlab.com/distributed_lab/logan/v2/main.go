@@ -7,6 +7,7 @@ import (
 	"io"
 )
 
+// DEPRECATED
 func New() *Entry {
 	lastLogLevel := AllLevels[len(AllLevels)-1]
 
@@ -18,6 +19,7 @@ func New() *Entry {
 	}
 }
 
+// DEPRECATED
 func (e *Entry) Out(writer io.Writer) *Entry {
 	logger := copyLogger(e.Entry.Logger)
 	logger.Out = writer
@@ -27,6 +29,7 @@ func (e *Entry) Out(writer io.Writer) *Entry {
 	}
 }
 
+// DEPRECATED
 func (e *Entry) Formatter(formatter Formatter) *Entry {
 	logger := copyLogger(e.Entry.Logger)
 	logger.Formatter = formatter
@@ -36,6 +39,7 @@ func (e *Entry) Formatter(formatter Formatter) *Entry {
 	}
 }
 
+// DEPRECATED
 func (e *Entry) Level(level Level) *Entry {
 	logger := copyLogger(e.Entry.Logger)
 	logger.Level = logrus.Level(level)
@@ -45,6 +49,7 @@ func (e *Entry) Level(level Level) *Entry {
 	}
 }
 
+// DEPRECATED
 func copyLogger(l *logrus.Logger) *logrus.Logger {
 	result := logrus.New()
 

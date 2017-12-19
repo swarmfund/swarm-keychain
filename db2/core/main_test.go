@@ -3,7 +3,7 @@ package core
 import (
 	"testing"
 
-	"gitlab.com/tokend/keychain/test"
+	"gitlab.com/swarmfund/keychain/test"
 )
 
 func TestLatestLedger(t *testing.T) {

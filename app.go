@@ -3,18 +3,16 @@ package keychain
 import (
 	"fmt"
 	"net/http"
-	"sync"
-	"time"
 
 	"github.com/pkg/errors"
-	coreHelper "gitlab.com/tokend/go/core"
-	"gitlab.com/tokend/go/doorman"
-	"gitlab.com/tokend/keychain/config"
-	"gitlab.com/tokend/keychain/db2"
-	"gitlab.com/tokend/keychain/db2/core"
-	"gitlab.com/tokend/keychain/db2/keychain"
-	"gitlab.com/tokend/keychain/internal/api"
-	"gitlab.com/tokend/keychain/log"
+	"gitlab.com/swarmfund/go/doorman"
+	"gitlab.com/swarmfund/keychain/config"
+	"gitlab.com/swarmfund/keychain/coreinfo"
+	"gitlab.com/swarmfund/keychain/db2"
+	"gitlab.com/swarmfund/keychain/db2/core"
+	"gitlab.com/swarmfund/keychain/db2/keychain"
+	"gitlab.com/swarmfund/keychain/internal/api"
+	"gitlab.com/swarmfund/keychain/log"
 	"golang.org/x/net/context"
 )
 
@@ -23,15 +21,11 @@ var version = ""
 
 // App represents the root of the state of a horizon instance.
 type App struct {
-	CoreInfo *coreHelper.Info
-
-	core      *coreHelper.Connector
 	_config   config.Config
 	coreQ     core.QInterface
 	keychainQ *keychain.Q
 	ctx       context.Context
 	cancel    func()
-	ticks     *time.Ticker
 
 	horizonVersion string
 }
@@ -48,13 +42,6 @@ func NewApp(config config.Config) (*App, error) {
 		_config: config,
 	}
 
-	coreConnector, err := coreHelper.NewConnector(http.DefaultClient, config.Core().URL)
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to get core connector")
-	}
-	app.core = coreConnector
-
-	app.ticks = time.NewTicker(1 * time.Second)
 	app.init()
 	return app, nil
 }
@@ -69,13 +56,17 @@ func (a *App) CoreAccountQ() *core.AccountQ {
 
 func (a *App) Serve() {
 	addr := fmt.Sprintf("%s:%d", a.Config().HTTP().Host, a.Config().HTTP().Port)
+	coreConnector, err := coreinfo.NewConnector(a._config.Core().URL)
+
+	if err != nil {
+		panic(errors.Wrap(err, "failed to get core connector"))
+	}
 
 	router := api.Router(
 		log.WithField("service", "api"),
-		&doorman.Doorman{
-			AccountQ: a.CoreAccountQ(),
-		},
+		doorman.New(false, a.CoreAccountQ()),
 		a.KeychainQ(),
+		coreConnector,
 	)
 
 	srv := &http.Server{
@@ -96,7 +87,6 @@ func (a *App) Serve() {
 // Close cancels the app and forces the closure of db connections
 func (a *App) Close() {
 	a.cancel()
-	a.ticks.Stop()
 
 	a.keychainQ.GetRepo().DB.Close()
 	a.coreQ.GetRepo().DB.Close()
@@ -125,26 +115,10 @@ func (a *App) KeychainRepo(ctx context.Context) *db2.Repo {
 	return &db2.Repo{DB: a.keychainQ.GetRepo().DB, Ctx: ctx}
 }
 
-// UpdateStellarCoreInfo updates the value of coreVersion and networkPassphrase
-// from the Stellar core API.
-func (a *App) UpdateStellarCoreInfo() {
-	info, err := a.core.GetCoreInfo()
-	if err != nil {
-		log.WithField("service", "core-info").WithError(err).Error("could not load stellar-core info")
-		return
-	}
-	a.CoreInfo = info
-}
-
 // Tick triggers horizon to update all of it's background processes such as
 // transaction submission, metrics, ingestion and reaping.
 func (a *App) Tick() {
-	var wg sync.WaitGroup
 	log.Debug("ticking app")
-	// update ledger state and stellar-core info in parallel
-	wg.Add(1)
-	go func() { a.UpdateStellarCoreInfo(); wg.Done() }()
-	wg.Wait()
 
 	log.Debug("finished ticking app")
 }
@@ -160,8 +134,6 @@ func (a *App) init() {
 func (a *App) run() {
 	for {
 		select {
-		case <-a.ticks.C:
-			a.Tick()
 		case <-a.ctx.Done():
 			log.Info("finished background ticker")
 			return

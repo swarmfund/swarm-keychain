@@ -6,7 +6,7 @@ import (
 	"database/sql"
 
 	"github.com/lann/squirrel"
-	"gitlab.com/tokend/keychain/db2"
+	"gitlab.com/swarmfund/keychain/db2"
 )
 
 type Key struct {

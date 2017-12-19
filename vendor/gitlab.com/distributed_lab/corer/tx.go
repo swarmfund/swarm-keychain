@@ -1,7 +1,7 @@
 package corer
 
 import (
-	"gitlab.com/distributed_lab/logan"
+	"gitlab.com/distributed_lab/logan/v3/errors"
 	"path"
 )
 
@@ -32,7 +32,7 @@ func (c *connector) SubmitTx(env string) (*CoreSubmissionResponse, error) {
 	var result CoreSubmissionResponse
 	err := c.getJSON(u.String(), &result)
 	if err != nil {
-		return nil, logan.Wrap(err, "Failed to get json")
+		return nil, errors.Wrap(err, "Failed to get json")
 	}
 
 	return &result, nil

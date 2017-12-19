@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"errors"
 
-	"gitlab.com/tokend/keychain/db2"
+	"gitlab.com/swarmfund/keychain/db2"
 	migrate "github.com/rubenv/sql-migrate"
 )
 

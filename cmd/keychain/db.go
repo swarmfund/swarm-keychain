@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/spf13/cobra"
-	"gitlab.com/tokend/keychain/config"
-	"gitlab.com/tokend/keychain/db2/keychain/schema"
-	"gitlab.com/tokend/keychain/log"
+	"gitlab.com/swarmfund/keychain/config"
+	"gitlab.com/swarmfund/keychain/db2/keychain/schema"
+	"gitlab.com/swarmfund/keychain/log"
 )
 
 var migrateCmd = &cobra.Command{

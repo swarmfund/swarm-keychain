@@ -1,8 +1,8 @@
 package core
 
 import (
-	"gitlab.com/tokend/go/resources"
-	"gitlab.com/tokend/keychain/db2"
+	"gitlab.com/swarmfund/go/resources"
+	"gitlab.com/swarmfund/keychain/db2"
 )
 
 type AccountQ struct {

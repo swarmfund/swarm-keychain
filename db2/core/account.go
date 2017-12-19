@@ -1,7 +1,7 @@
 package core
 
 import (
-	"gitlab.com/tokend/go/xdr"
+	"gitlab.com/swarmfund/go/xdr"
 	sq "github.com/lann/squirrel"
 )
 
@@ -36,13 +36,6 @@ func (q *Q) Accounts() QInterface {
 func (q *Q) ForTypes(types []xdr.AccountType) QInterface {
 	if q.err != nil {
 		return q
-	}
-	for _, t := range types {
-		if t == xdr.AccountTypeExchange {
-			// master is our secret exchange
-			types = append(types, xdr.AccountTypeMaster)
-			break
-		}
 	}
 	q.sql = q.sql.Where(sq.Eq{"account_type": types})
 	return q
